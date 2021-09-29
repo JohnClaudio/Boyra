@@ -1,5 +1,6 @@
 package br.org.generation.boyra.model;
 
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -17,16 +18,16 @@ public class Categoria {
 	@GeneratedValue( strategy = GenerationType.IDENTITY)
 	private long id;
 	
-	@NotNull(message =" obrigatorio")
-	@Size(min=5, max =255)
+	@NotNull(message ="O atributo descricao é obrigatório!")
+	@Size(min=5, max =255, message = "O atributo título deve ter no minimo 5 e no max 255 caracteres!")
 	private String descricao;
 	
-	@NotNull(message =" obrigatorio")
-	@Size(min=5, max =50)
+	@NotNull(message ="O atributo nome é obrigatório!")
+	@Size(min=5, max =50, message = "O atributo título deve ter no minimo 5 e no max 50 caracteres!")
 	private String nome;
 
-	@NotNull(message =" obrigatorio")
-	@Size(min=5, max =80)
+	@NotNull(message ="O atributo palavraChave é obrigatório!")
+	@Size(min=5, max =80, message = "O atributo título deve ter no minimo 5 e no max 80 caracteres!")
 	private double palavraChave;
 	
 
