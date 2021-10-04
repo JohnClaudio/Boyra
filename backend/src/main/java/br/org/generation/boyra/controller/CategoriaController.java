@@ -17,43 +17,41 @@ public class CategoriaController {
 
 	@Autowired
 	private CategoriaRepository repository;
-	
+
 	@GetMapping
-	public ResponseEntity<List<Categoria>> getAll (){
+	public ResponseEntity<List<Categoria>> getAll() {
 		return ResponseEntity.ok(repository.findAll());
-	
+
 	}
-	
+
 	@GetMapping("/{id}")
 	public ResponseEntity<Categoria> getById(@PathVariable long id) {
 		return repository.findById(id)
-			.map(resp -> ResponseEntity.ok(resp))
-			.orElse(ResponseEntity.notFound().build());
+				.map(resp -> ResponseEntity.ok(resp))
+				.orElse(ResponseEntity.notFound().build());
 	}
-	
+
 	@PostMapping
-	public ResponseEntity<Categoria> postCategoria (@RequestBody Categoria categoria){
+	public ResponseEntity<Categoria> postCategoria(@RequestBody Categoria categoria) {
 		return ResponseEntity.status(HttpStatus.CREATED).body(repository.save(categoria));
 	}
-	
-	
+
+
 	@PutMapping
-	public ResponseEntity<Categoria> put(@RequestBody Categoria categoria)
-	{
+	public ResponseEntity<Categoria> put(@RequestBody Categoria categoria) {
 		return ResponseEntity.status(HttpStatus.CREATED)
 				.body(repository.save(categoria));
 	}
 
-	@GetMapping("/{nome}")
-	public ResponseEntity<List<Categoria>> getByName(@PathVariable String nome)
-	{
+	@GetMapping("/nome/{nome}")
+	public ResponseEntity<List<Categoria>> getByName(@PathVariable String nome) {
 		return ResponseEntity.ok().body(repository.findAllByNomeContainingIgnoreCase(nome));
 	}
 
-	@DeleteMapping
-	public void deletebyId(Long id)
-	{
+	@DeleteMapping("/{id}")
+	public void deleteCategoria(@PathVariable long id) {
 		repository.deleteById(id);
+
 	}
-	
+
 }
