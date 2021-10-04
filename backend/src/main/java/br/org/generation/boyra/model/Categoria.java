@@ -26,8 +26,7 @@ public class Categoria {
 	@Size(min=5, max =50, message = "O atributo título deve ter no minimo 5 e no max 50 caracteres!")
 	private String nome;
 
-	@NotNull(message ="O atributo palavraChave é obrigatório!")
-	private double palavraChave;
+	private String palavraChave;
 	
 
 	

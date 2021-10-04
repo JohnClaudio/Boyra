@@ -5,14 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import br.org.generation.boyra.model.Categoria;
 import br.org.generation.boyra.repository.CategoriaRepository;
@@ -49,6 +42,18 @@ public class CategoriaController {
 	{
 		return ResponseEntity.status(HttpStatus.CREATED)
 				.body(repository.save(categoria));
+	}
+
+	@GetMapping("/{nome}")
+	public ResponseEntity<List<Categoria>> getByName(@PathVariable String nome)
+	{
+		return ResponseEntity.ok().body(repository.findAllByNomeContainingIgnoreCase(nome));
+	}
+
+	@DeleteMapping
+	public void deletebyId(Long id)
+	{
+		repository.deleteById(id);
 	}
 	
 }
