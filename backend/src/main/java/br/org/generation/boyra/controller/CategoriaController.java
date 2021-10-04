@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -22,25 +23,32 @@ import br.org.generation.boyra.repository.CategoriaRepository;
 public class CategoriaController {
 
 	@Autowired
-	private CategoriaRepository Repository;
+	private CategoriaRepository repository;
 	
 	@GetMapping
 	public ResponseEntity<List<Categoria>> getAll (){
-		return ResponseEntity.ok(Repository.findAll());
+		return ResponseEntity.ok(repository.findAll());
 	
 	}
 	
 	@GetMapping("/{id}")
 	public ResponseEntity<Categoria> getById(@PathVariable long id) {
-		return Repository.findById(id)
+		return repository.findById(id)
 			.map(resp -> ResponseEntity.ok(resp))
 			.orElse(ResponseEntity.notFound().build());
 	}
 	
 	@PostMapping
 	public ResponseEntity<Categoria> postCategoria (@RequestBody Categoria categoria){
-		return ResponseEntity.status(HttpStatus.CREATED).body(Repository.save(categoria));
+		return ResponseEntity.status(HttpStatus.CREATED).body(repository.save(categoria));
 	}
-
+	
+	
+	@PutMapping
+	public ResponseEntity<Categoria> put(@RequestBody Categoria categoria)
+	{
+		return ResponseEntity.status(HttpStatus.CREATED)
+				.body(repository.save(categoria));
+	}
 	
 }
