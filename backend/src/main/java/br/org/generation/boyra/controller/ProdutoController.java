@@ -25,6 +25,11 @@ public class ProdutoController {
 		return ResponseEntity.ok(repository.findAll());
 	}
 	
+    @GetMapping("/nome/{nome}")
+        public ResponseEntity<List<Produto>> getByName(@PathVariable String nome) {
+        return ResponseEntity.ok().body(repository.findAllByNomeContainingIgnoreCase(nome));
+    }
+	
 	@GetMapping("/{id}")
 	public ResponseEntity <Produto> getById(@PathVariable long id){
 		return repository.findById(id)
@@ -41,6 +46,18 @@ public class ProdutoController {
 	public ResponseEntity <Produto> postProduto (@RequestBody Produto produto){
 		return ResponseEntity.status(HttpStatus.CREATED).body(repository.save(produto));
 	}
+	
+    @PutMapping
+    public ResponseEntity<Produto> UpdateProduct (@RequestBody Produto produto) {
+        return ResponseEntity.status(HttpStatus.CREATED)
+                .body(repository.save(produto));
+    }
+
+    @DeleteMapping("/{id}")
+    public void deleteProduto(@PathVariable long id) {
+        repository.deleteById(id);
+
+    }
 	
 }
 
