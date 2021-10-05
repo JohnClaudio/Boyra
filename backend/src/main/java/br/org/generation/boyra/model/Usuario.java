@@ -1,9 +1,6 @@
 package br.org.generation.boyra.model;
 
-	import javax.persistence.Entity;
-	import javax.persistence.GeneratedValue;
-	import javax.persistence.GenerationType;
-	import javax.persistence.Table;
+	import javax.persistence.*;
 	import javax.validation.constraints.NotNull;
 	import javax.validation.constraints.Size;
 
@@ -11,7 +8,7 @@ package br.org.generation.boyra.model;
 	@Table (name = "tb_usuario")
 	public class Usuario {
 
-		
+		@Id
 		@NotNull
 		@GeneratedValue( strategy = GenerationType.IDENTITY)
 		private long id;

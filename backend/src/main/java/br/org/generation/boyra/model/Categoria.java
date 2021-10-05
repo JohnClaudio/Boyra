@@ -22,7 +22,7 @@ public class Categoria {
 
 	@Id
 	@GeneratedValue( strategy = GenerationType.IDENTITY)
-	private long id;
+	private long id_categoria;
 	
 	@NotNull(message ="O atributo descricao é obrigatório!")
 	@Size(min=5, max =255, message = "O atributo título deve ter no minimo 5 e no max 255 caracteres!")
@@ -42,7 +42,7 @@ public class Categoria {
 
 
 	public long getId() {
-		return id;
+		return id_categoria;
 	}
 
 	public List<Produto> getProduto() {
@@ -54,7 +54,7 @@ public class Categoria {
 	}
 
 	public void setId(long id) {
-		this.id = id;
+		this.id_categoria = id;
 	}
 
 	public String getDescricao() {
