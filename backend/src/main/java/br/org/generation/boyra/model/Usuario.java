@@ -18,8 +18,8 @@ package br.org.generation.boyra.model;
 		private String usuario;
 		
 		@NotNull
-		@Size (min = 5, max = 200 , message = "O campo de email é obrigatorio")
-		private String email;
+		@Size (min = 5, max = 200 , message = "O campo de nome é obrigatorio")
+		private String nome;
 		
 		@NotNull
 		@Size (min = 5, max = 100 , message = "O campo de senha é obrigatorio")
@@ -41,12 +41,12 @@ package br.org.generation.boyra.model;
 			this.usuario = usuario;
 		}
 
-		public String getEmail() {
-			return email;
+		public String getNome() {
+			return nome;
 		}
 
-		public void setEmail(String email) {
-			this.email = email;
+		public void setEmail(String nome) {
+			this.nome = nome;
 		}
 
 		public String getSenha() {

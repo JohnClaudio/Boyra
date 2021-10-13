@@ -1,4 +1,4 @@
-package br.org.generation.blogpessoal.service;
+package br.org.generation.boyra.service;
 
 import java.nio.charset.Charset;
 import java.util.List;
@@ -9,9 +9,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import br.org.generation.blogpessoal.model.Usuario;
-import br.org.generation.blogpessoal.model.UsuarioLogin;
-import br.org.generation.blogpessoal.repository.UsuarioRepository;
+import br.org.generation.boyra.model.Usuario;
+import br.org.generation.boyra.model.UsuarioLogin;
+import br.org.generation.boyra.repository.UsuarioRepository;
 
 @Service
 public class UsuarioService {
