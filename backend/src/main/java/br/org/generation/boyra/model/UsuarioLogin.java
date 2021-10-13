@@ -1,4 +1,4 @@
-package br.org.generation.blogpessoal.model;
+package br.org.generation.boyra.model;
 
 public class UsuarioLogin {
 	

@@ -1,4 +1,4 @@
-package br.org.generation.blogpessoal.controller;
+package br.org.generation.boyra.controller;
 
 import java.util.List;
 import java.util.Optional;
@@ -13,9 +13,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.org.generation.blogpessoal.model.Usuario;
-import br.org.generation.blogpessoal.model.UsuarioLogin;
-import br.org.generation.blogpessoal.service.UsuarioService;
+import br.org.generation.boyra.model.Usuario;
+import br.org.generation.boyra.model.UsuarioLogin;
+import br.org.generation.boyra.service.UsuarioService;
 
 @RestController
 @RequestMapping("/usuarios")
@@ -25,7 +25,8 @@ public class UsuarioController {
 	@Autowired
 	private UsuarioService usuarioService;
 
-	@GetMapping("/all")
+	
+@GetMapping("/all")
 	public ResponseEntity<List<Usuario>> getAll() {
 	
 		return ResponseEntity.ok(usuarioService.listarUsuarios());
