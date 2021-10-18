@@ -24,7 +24,7 @@ public class SwaggerConfig {
         return new Docket(DocumentationType.SWAGGER_2)
                 .select()
                 .apis(RequestHandlerSelectors
-                        .basePackage("br.org.generation.blogpessoal.controller"))
+                        .basePackage("br.org.generation.boyra.controller"))
                 .paths(PathSelectors.any())
                 .build()
                 .apiInfo(metadata())
@@ -38,11 +38,11 @@ public class SwaggerConfig {
     public static ApiInfo metadata() {
 
         return new ApiInfoBuilder()
-                .title("API - Blog Pessoal")
-                .description("Projeto API Spring - Blog Pessoal")
+                .title("API - Projeto Boyrá")
+                .description("Projeto API Spring - Boyrá")
                 .version("1.0.0")
                 .license("Apache License Version 2.0")
-                .licenseUrl("https://github.com/rafaelq80")
+                .licenseUrl("https://github.com/")
                 .contact(contact())
                 .build();
     }
