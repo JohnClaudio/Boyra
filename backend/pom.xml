@@ -46,7 +46,7 @@
 			<artifactId>springfox-boot-starter</artifactId>
 			<version>3.0.0</version>
 		</dependency>
-		
+
 		<!-- Dependência para Codificação do Token -->
 		<dependency>
 			<groupId>commons-codec</groupId>
