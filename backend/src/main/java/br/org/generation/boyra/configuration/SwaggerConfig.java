@@ -49,9 +49,9 @@ public class SwaggerConfig {
 
     private static Contact contact() {
 
-        return new Contact("Squad4",
-                "",
-                "");
+        return new Contact("Caique Batista, Inaie Forster, João Claudio, Melissa Amorim, Sâmila Thalyta ",
+                "caiquebatistam@gmail.com, inaieforster@yahoo.com.br, joaoclaudiobarroso97@gmail.com, melissa@gmail.com, samila@gmail.com",
+                "github.com/caiquebatistam , github.com/inaieforster , github.com/JohnClaudio , github.com/amorimmel , github.com/samilathalyta");
 
     }
 
