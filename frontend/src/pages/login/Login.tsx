@@ -30,7 +30,7 @@ function Login() {
                     </Box>
                 </Box>
             </Grid>
-            <Grid xs={6} className='imagem'>
+            <Grid xs={6} >
                 
             </Grid>
 
