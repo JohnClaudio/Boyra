@@ -1,0 +1,29 @@
+.homeImagem{
+   
+    width:100vw;
+    height: 35vh;
+    background-image: url('https://guiadafarmacia.com.br/wp-content/uploads/2021/05/produtos-sustentaveis.jpg');
+    background-repeat: no-repeat;
+  
+    background-position:center;
+    background-size: 100vw;
+    
+}
+img{display:block}
+
+.principalItem{
+    width:30vw;
+    height: 400px;
+    border-radius: 30px;
+  
+}
+.bg{
+    background-color: black;
+}
+.secondaryItem{
+    width:200px;
+    height: 200px;
+    border-radius: 30px;
+ 
+
+}
