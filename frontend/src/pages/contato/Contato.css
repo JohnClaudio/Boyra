@@ -1,0 +1,20 @@
+.textos{
+    font-weight: bold;
+}
+
+.imagem{
+        background-image: url('https://i.imgur.com/fR9OdpL.png');
+        background-repeat: no-repeat;
+        background-attachment: local;
+        width: 80vh;
+        min-height: 80vh;
+        background-size: cover; 
+       
+}
+.aux{
+    background: #65B1C2;
+}
+
+.text-decorator-none{
+    text-decoration: none;
+}

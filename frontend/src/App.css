@@ -1,3 +1,13 @@
 body{
-    background-color: #65B1C2!important;
+    background-color: #ffffff!important;
+}
+html,body{
+    height: 100vh;
+    width : 100vw;
+    position:relative;
+}
+footer{
+    position: absolute;
+    bottom:0;
+    float:none;
 }

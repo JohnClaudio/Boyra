@@ -1,5 +1,23 @@
 .AppBar{
     background-color: #65B1C2!important;
-    height:14;
+    height:90px;
+    width:100vw;
 
+}
+.searchMenu{
+    width:80vh;
+}
+.icon{
+   font-size: 2.3rem!important;
+}
+.logoNavBar{
+    padding-top: 15px;
+    width:110px;
+    height:100px;
+    margin-top: 5px;
+
+}
+.bg{
+    background-color: white;
+    color:black;
 }

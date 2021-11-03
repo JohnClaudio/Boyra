@@ -7,12 +7,11 @@ import {Typography, Box, Grid } from '@material-ui/core/';
 import { makeStyles } from '@material-ui/core/styles';
 
 
+
 const useStyles = makeStyles({
     
     root:{
         width: '100vw',
-        position: 'absolute',
-        bottom:0,
         color:'white',
     },
 
@@ -38,8 +37,7 @@ function Footer() {
             <Grid container direction="row" justifyContent="center" alignItems="center" >
 
                 <Grid alignItems="center" item xs={12}>
-
-                   
+                  
                     <Box style={{  height: "60px" }} className={classes.background}>
                         <Box paddingTop={1}>
                             <Typography variant="subtitle2" align="center" gutterBottom >© 2020 Copyright:</Typography>

@@ -1,47 +1,73 @@
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch, } from 'react-router-dom';
+import { createTheme, ThemeProvider } from '@material-ui/core'
 import React from 'react';
 import './App.css';
+
 /*
 import Footer from './components/estaticos/Footer/Footer';
 import Navbar from './components/estaticos/navBar/Navbar';
 import Login from './pages/login/Login';
 import SobreNos from './pages/sobreNos/SobreNos';*/
 import Home from './pages/home/Home';
+import Teste from './pages/home/Teste';
 import Login from './pages/login/Login';
+import Contato from './pages/contato/Contato';
 import Navbar from './components/estaticos/navbar/Navbar';
+import Categoria from './components/estaticos/menuCategoria/MenuCategoria';
 import Footer from './components/estaticos/footer/Footer';
+
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: '#65B1C2',
+      dark: '#000000'
+    },
+    secondary: {
+      main: '#FFFFFF',
+    }
+
+  },
+});
+
 
 function App() {
   return (
-   <>
-<Router>
-        <Switch>
-      
-          <div>
-          <Navbar/>
+    <>
+      <ThemeProvider theme={theme}>
+        <Router>
+          <Switch>
 
-          <Route exact path='/'>
-          <Home/>
-          </Route>
+            <div>
+              <Navbar />
+              <Categoria />
 
-          <Route path='/home'>
-          <Home/>     
-          </Route>
+              <Route exact path='/'>
+                <Teste />
+              </Route>
 
-          <Route path='/login'>
-          <Login/>        
-          </Route>
+              <Route path='/home'>
+                <Home />
+        
+              </Route>
 
-          <Route exact path='/fale-conosco'>
-          <Home/>
-          </Route>
-          <Footer/>
-          </div>
+              <Route path='/login'>
+                <Login />
+                <Footer/>
+              </Route>
 
-        </Switch>
-    
+              <Route exact path='/contato'>
+                <Contato />
+                <Footer/>
+              </Route>
+
+       
+            </div>
+
+          </Switch>
+
         </Router>
-   </>
+      </ThemeProvider>
+    </>
   );
 }
 

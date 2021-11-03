@@ -1,13 +1,20 @@
 .homeImagem{
-   
+   margin-top: 2%;
     width:100vw;
-    height: 35vh;
+    height: 400px;
     background-image: url('https://guiadafarmacia.com.br/wp-content/uploads/2021/05/produtos-sustentaveis.jpg');
     background-repeat: no-repeat;
-  
+
     background-position:center;
     background-size: 100vw;
     
+}
+
+.tituloHome{
+    margin-left:70%;
+    padding-top: 12%;
+    color:white;
+    text-shadow: 0px -40px 5px black;
 }
 img{display:block}
 
@@ -17,13 +24,15 @@ img{display:block}
     border-radius: 30px;
   
 }
-.bg{
-    background-color: black;
-}
+
 .secondaryItem{
     width:200px;
     height: 200px;
     border-radius: 30px;
  
-
 }
+
+.cardProd{
+    
+}
+
