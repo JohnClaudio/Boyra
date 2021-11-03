@@ -20,6 +20,8 @@ function Navbar() {
                     <Box style={{ cursor: "pointer" , flexGrow:1}} pr={5} >
                     
                        <img className="logoNavBar" src="./images/LOGO3.png" alt="" />
+                        
+                 
                     </Box>
 
                     

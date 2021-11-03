@@ -12,27 +12,55 @@
 
 .tituloHome{
     margin-left:70%;
-    padding-top: 12%;
+    padding-top: 10%;
     color:white;
-    text-shadow: 0px -40px 5px black;
+    text-shadow: 0px -0px 15px black;
 }
 img{display:block}
 
 .principalItem{
     width:30vw;
-    height: 400px;
+    height: 450;
     border-radius: 30px;
   
 }
 
 .secondaryItem{
-    width:200px;
-    height: 200px;
+    width:300px;
+    height: 250px;
     border-radius: 30px;
  
 }
-
-.cardProd{
-    
+.flexcard{
+    display: flex;
+    flex-wrap: wrap;
 }
+.card{
+    height: 300px;
+    padding:5px;
+    min-width: 190px; 
+    margin-bottom: 5%;   
+    } 
+    .card> img{      
+    width: 300px;
+    height: 250px;;
+    max-width: 300px;
+    }     
+    .price{
+    font-size: 20px;
+    color: #5CA720;
+    font-weight: 400;
+    }
+    .description{
+    font-size: 14px;
+    color: black;
+   
+    overflow-wrap:break-word;
+    overflow: visible;
+    max-width: 200px;
+    }
 
+.aux{
+    background:#65B1C2;
+    color:white;
+}
