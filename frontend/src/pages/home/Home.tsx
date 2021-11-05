@@ -123,6 +123,19 @@ return(
             <label className="price">R$: 50</label>
             </Box>
 
+            <Box className="card">
+            <img src="https://cdn.shopify.com/s/files/1/0048/9508/0519/products/triofacial_540x.jpg?v=1619023593" alt="" />
+            <p className="description">lorem lorem lorem lorem</p>
+            <label className="price">R$: 50</label>
+            </Box>
+
+            <Box className="card">
+            <img src="https://cdn.shopify.com/s/files/1/0048/9508/0519/products/triofacial_540x.jpg?v=1619023593" alt="" />
+            <p className="description">lorem lorem lorem lorem</p>
+            <label className="price">R$: 50</label>
+            </Box>
+
+
      
 
             </Box>
