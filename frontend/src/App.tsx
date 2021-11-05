@@ -15,6 +15,7 @@ import Contato from './pages/contato/Contato';
 import Navbar from './components/estaticos/navbar/Navbar';
 import Categoria from './components/estaticos/menuCategoria/MenuCategoria';
 import Footer from './components/estaticos/footer/Footer';
+import CadastroUsuario from './pages/cadastroUsuario/CadastroUsuario';
 
 const theme = createTheme({
   palette: {
@@ -48,6 +49,12 @@ function App() {
               <Route path='/home'>
                 <Home />
         
+              </Route>
+
+
+              <Route path='/cadastroUsuario'>
+                <CadastroUsuario />
+                
               </Route>
 
               <Route path='/login'>
