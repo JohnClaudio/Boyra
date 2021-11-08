@@ -3,56 +3,86 @@
 import InstagramIcon from '@material-ui/icons/Instagram';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
-import {Typography, Box, Grid } from '@material-ui/core/';
+import { Typography, Box, Grid, TextField, IconButton } from '@material-ui/core/';
 import { makeStyles } from '@material-ui/core/styles';
+import { height } from '@mui/system';
+
 
 
 
 const useStyles = makeStyles({
-    
-    root:{
+
+    root: {
         width: '100vw',
-        color:'white',
+        height: '300',
+        background: '#F9F9F9',
+        marginTop: '5%'
     },
 
     background: {
-        background: '#65B1C2',
+        background: '#F9F9F9',
+        color: '#000000',
 
     },
 
-    icon:{
+    icon: {
         fontSize: 60,
-        color: 'white',
-        
+        color: '#65B1C2',
+
+
+    },
+
+    cartao: {
+        width: '200px',
+        height: '45px',
+        marginTop: 15,
     }
 
 
-    })
+})
 
 function Footer() {
-   
+
     const classes = useStyles();
     return (
-         <footer className={classes.root}>
+        <footer className={classes.root}>
             <Grid container direction="row" justifyContent="center" alignItems="center" >
 
-                <Grid alignItems="center" item xs={12}>
-                  
-                    <Box style={{  height: "60px" }} className={classes.background}>
-                        <Box paddingTop={1}>
-                            <Typography variant="subtitle2" align="center" gutterBottom >© 2020 Copyright:</Typography>
-                        </Box>
-
+                <Grid alignItems="center" item xs={6}>
+                    <Box sx={{ ml: 7, marginTop: 5 }} >
                         <Box>
-                            <a target="_blank" href="#">
-                                <Typography variant="subtitle2" gutterBottom align="center" style={ {color: "white" }} > BOYRÁ</Typography>
-                            </a>
+                            <Typography variant="subtitle2" style={{ color: "#000000" }} > Contato</Typography>
+                            <Typography variant="subtitle2" style={{ color: "#000000" }} > Termo de Serviço</Typography>
+                            <Typography variant="subtitle2" style={{ color: "#000000" }} > Politica de Privacidade</Typography>
+                            <Typography variant="subtitle2" style={{ color: "#000000" }} > Cancelamento, troca e reembolso</Typography>
+                        </Box>
+                        <Box sx={{ marginTop: 45 }}>
+                            <IconButton color="primary" aria-label="upload picture" component="span" >
+                                <InstagramIcon className="icon" />
+                            </IconButton>
+                            <IconButton color="primary" aria-label="upload picture" component="span">
+                                <FacebookIcon className="icon" />
+                            </IconButton>
                         </Box>
                     </Box>
                 </Grid>
+
+                <Grid alignItems="center" item xs={6}>
+                    <Typography variant="subtitle2" style={{ color: "#000000" }} > Newsletter</Typography>
+
+                   <Box display="flex"> 
+                    <input>
+                    </input>
+                    <Typography  variant="subtitle2" style={{ marginLeft:9, color: "#000000" }} > Inscrever</Typography>
+                   </Box> 
+                    <Box sx={{ ml:50, marginTop:80 }}>
+                    <img src="https://i.imgur.com/CvXjFnk.png" className={classes.cartao} />
+                    </Box>
+
+                </Grid>
             </Grid>
         </footer>
-        
+
     )
 }
 

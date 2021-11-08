@@ -9,13 +9,13 @@ import Navbar from './components/estaticos/navBar/Navbar';
 import Login from './pages/login/Login';
 import SobreNos from './pages/sobreNos/SobreNos';*/
 import Home from './pages/home/Home';
-import Teste from './pages/home/Teste';
 import Login from './pages/login/Login';
 import Contato from './pages/contato/Contato';
 import Navbar from './components/estaticos/navbar/Navbar';
 import Categoria from './components/estaticos/menuCategoria/MenuCategoria';
 import Footer from './components/estaticos/footer/Footer';
 import CadastroUsuario from './pages/cadastroUsuario/CadastroUsuario';
+import Produtos from './pages/produtos/Produtos';
 
 const theme = createTheme({
   palette: {
@@ -43,7 +43,7 @@ function App() {
               <Categoria />
 
               <Route exact path='/'>
-                <Teste />
+                <Home />
               </Route>
 
               <Route path='/home'>
@@ -61,6 +61,13 @@ function App() {
                 <Login />
                 <Footer/>
               </Route>
+
+              <Route exact path='/produtos'>
+                <Produtos />
+               
+              </Route>
+
+
 
               <Route exact path='/contato'>
                 <Contato />

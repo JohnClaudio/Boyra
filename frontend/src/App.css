@@ -6,8 +6,3 @@ html,body{
     width : 100vw;
     position:relative;
 }
-footer{
-    position: absolute;
-    bottom:0;
-    float:none;
-}
