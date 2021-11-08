@@ -25,7 +25,7 @@ const Home = () => {
 
                     <Grid item xs={6}  >
 
-                        <Box className= 'secondaryItem'>
+                        <Box className='secondaryItem'>
                             <ProdutoDestaque
                                 url="https://cdn.shopify.com/s/files/1/0048/9508/0519/products/novacesta_540x.png?v=1606162938"
                                 title="Produto1"
@@ -64,7 +64,7 @@ const Home = () => {
                                         title="Produto1"
                                         height="550px"
                                         width="70%"
-                                    />                                        
+                                    />
                                     <ProdutoDestaque
                                         url="https://cdn.shopify.com/s/files/1/0048/9508/0519/products/novacesta_540x.png?v=1606162938"
                                         title="Produto1"
@@ -160,17 +160,7 @@ const Home = () => {
 
 
 
-            <Box style={{ height: "60px" }} className="aux ">
-                <Box paddingTop={1}>
-                    <Typography variant="subtitle2" align="center" gutterBottom >© 2020 Copyright:</Typography>
-                </Box>
-
-                <Box>
-                    <a target="_blank" href="#">
-                        <Typography variant="subtitle2" gutterBottom align="center" style={{ color: "white" }} > BOYRÁ</Typography>
-                    </a>
-                </Box>
-            </Box>
+        
 
         </>
     )

@@ -7,3 +7,8 @@
 
     font-weight: 'bold';
 }
+
+.inputLogin{
+    max-width: 100%;
+    margin: auto;
+}
