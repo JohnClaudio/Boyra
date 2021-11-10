@@ -26,10 +26,7 @@ img{display:block}
 }
 
 .secondaryItem{
-    display: flex;
-    justify-content: flex-end;
-    justify-items: flex-end;
-    margin: 0 !important;
+
  
 }
 .flexcard{
