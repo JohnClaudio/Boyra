@@ -80,8 +80,8 @@ const ImageMarked = styled('span')(({ theme }) => ({
 
 export default function ProdutoDestaque(prop:{url:string, title:string, height:string, width: string }) {
   return (
-    <Box sx={{ display: 'flex', flexWrap: 'wrap', minWidth: 300, width: '40%' }}>
-      {images.map((image) => (
+    <Box sx={{minWidth: 300, width: '40%', padding:0, ml:-12 }}>
+
         <ImageButton
           focusRipple
           key={prop.title}
@@ -104,12 +104,12 @@ export default function ProdutoDestaque(prop:{url:string, title:string, height:s
                 pb: (theme) => `calc(${theme.spacing(1)} + 6px)`,
               }}
             >
-              {image.title}
+              {prop.title}
               <ImageMarked className="MuiImageMarked-root" />
             </Typography>
           </Image>
         </ImageButton>
-      ))}
     </Box>
+
   );
 }
