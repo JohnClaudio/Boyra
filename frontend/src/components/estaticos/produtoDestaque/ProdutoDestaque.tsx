@@ -80,7 +80,7 @@ const ImageMarked = styled('span')(({ theme }) => ({
 
 export default function ProdutoDestaque(prop:{url:string, title:string, height:string, width: string }) {
   return (
-    <Box sx={{minWidth: 300, width: '40%', padding:0, ml:-12 }}>
+    <Box sx={{minWidth: 300, width: '40%', pb:-1, ml:-5, marginBottom:1 }}>
 
         <ImageButton
           focusRipple

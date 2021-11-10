@@ -4,7 +4,12 @@ import './Home.css';
 import ProdutoDestaque from '../../components/estaticos/produtoDestaque/ProdutoDestaque';
 
 
+
+
 const Home = () => {
+
+    const tamanhoProduto = { altura: '230px', largura: '250px' }
+    const tamanhoProduto2 = { altura: '500px', largura: '600px' }
     return (
         <>
             <Box>
@@ -16,21 +21,21 @@ const Home = () => {
 
                 </Box>
 
-                <Box sx={{ mt: 5 }}>
+                <Box sx={{ mt: 2 }}>
                     <Typography variant="h3" align="center" gutterBottom >Destaques</Typography>
                 </Box>
 
 
                 <Grid container direction="row" justifyContent='flex-end' alignItems='flex-end'  >
 
-                    <Grid item xs={6}  >
+                    <Grid item xs={6} container direction="row" justifyContent='center' alignItems='center' >
 
                         <Box className='secondaryItem'>
                             <ProdutoDestaque
                                 url="https://cdn.shopify.com/s/files/1/0048/9508/0519/products/novacesta_540x.png?v=1606162938"
-                                title="Produto1"
-                                height="450px"
-                                width="60%"
+                                title="Sabonetes Personalizados"
+                                height={tamanhoProduto2.altura}
+                                width={tamanhoProduto2.largura}
                             />
                         </Box>
 
@@ -41,44 +46,48 @@ const Home = () => {
 
                     <Grid item xs={6}   >
 
-                        <Box display="flex" alignItems="center" justifyContent="center" sx={{ pb: 10 }}>
 
 
-                            <Box paddingTop={5} paddingRight={1} display="flex" sx={{ justifyContent: 'flex-end' }}>
 
-                                <Box display="flex" >
+                        <Box paddingTop={3} paddingRight={4} paddingLeft={4}  display="flex" sx={{ justifyContent: 'start' }}>
+
+                            <Box  display="flex" >
+                                <Box paddingBottom={-2} paddingLeft={4}>
                                     <ProdutoDestaque
                                         url="https://cdn.shopify.com/s/files/1/0048/9508/0519/products/novacesta_540x.png?v=1606162938"
                                         title="Produto1"
-                                        height="450px"
-                                        width="70%"
+                                        height={tamanhoProduto.altura}
+                                        width={tamanhoProduto.largura}
                                     />
                                     <ProdutoDestaque
                                         url="https://cdn.shopify.com/s/files/1/0048/9508/0519/products/novacesta_540x.png?v=1606162938"
                                         title="Produto1"
-                                        height="550px"
-                                        width="70%"
-                                    />
-                                    <ProdutoDestaque
-                                        url="https://cdn.shopify.com/s/files/1/0048/9508/0519/products/novacesta_540x.png?v=1606162938"
-                                        title="Produto1"
-                                        height="550px"
-                                        width="70%"
-                                    />
-                                    <ProdutoDestaque
-                                        url="https://cdn.shopify.com/s/files/1/0048/9508/0519/products/novacesta_540x.png?v=1606162938"
-                                        title="Produto1"
-                                        height="550px"
-                                        width="70%"
+                                        height={tamanhoProduto.altura}
+                                        width={tamanhoProduto.largura}
                                     />
                                 </Box>
-
-
-
-
+                                <Box>
+                                    <ProdutoDestaque
+                                        url="https://cdn.shopify.com/s/files/1/0048/9508/0519/products/novacesta_540x.png?v=1606162938"
+                                        title="Produto1"
+                                        height={tamanhoProduto.altura}
+                                        width={tamanhoProduto.largura}
+                                    />
+                                    <ProdutoDestaque
+                                        url="https://cdn.shopify.com/s/files/1/0048/9508/0519/products/novacesta_540x.png?v=1606162938"
+                                        title="Produto1"
+                                        height={tamanhoProduto.altura}
+                                        width={tamanhoProduto.largura}
+                                    />
+                                </Box>
                             </Box>
 
+
+
+
                         </Box>
+
+
 
                     </Grid>
                 </Grid>
@@ -160,7 +169,7 @@ const Home = () => {
 
 
 
-        
+
 
         </>
     )
