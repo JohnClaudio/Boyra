@@ -9,6 +9,7 @@ import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import Icon from '@mui/material/Icon'
 import DeleteIcon from '@material-ui/icons/Delete';
 import MenuIcon from '@mui/icons-material/Menu';
+import LogoutIcon from '@mui/icons-material/Logout';
 
 
 
@@ -66,6 +67,14 @@ function Navbar() {
                             <ShoppingCartIcon className="icon" />
                         </IconButton>
 
+
+                       
+                            <IconButton className="icon" color="secondary" >
+                                <LogoutIcon className="icon" />
+                            </IconButton>
+                     
+
+                        
 
 
                     </Box>
