@@ -1,7 +1,7 @@
 # projeto-integrador
 
 
-Projeto integrador realizado em grupo na Generation Brasil TASK7.
+Projeto integrador realizado em grupo na Generation Brasil TASK10.
 
 
 ## Autores
