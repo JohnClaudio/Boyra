@@ -1,7 +1,7 @@
 .homeImagem{
    margin-top: 2%;
     width:100vw;
-    height: 400px;
+    height: 500px;
     background-image: url('https://guiadafarmacia.com.br/wp-content/uploads/2021/05/produtos-sustentaveis.jpg');
     background-repeat: no-repeat;
 
@@ -9,6 +9,7 @@
     background-size: 100vw;
     
 }
+
 
 .tituloHome{
     margin-left:70%;

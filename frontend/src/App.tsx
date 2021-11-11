@@ -65,6 +65,7 @@ function App() {
 
               <Route exact path='/produtos'>
                 <Produtos />
+                <Footer/>
                
               </Route>
 

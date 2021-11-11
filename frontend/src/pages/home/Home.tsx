@@ -23,6 +23,7 @@ const Home = () => {
 
                 <Box sx={{ mt: 2 }}>
                     <Typography variant="h3" align="center" gutterBottom >Destaques</Typography>
+                    <hr></hr>
                 </Box>
 
 
@@ -49,9 +50,9 @@ const Home = () => {
 
 
 
-                        <Box paddingTop={3} paddingRight={4} paddingLeft={4}  display="flex" sx={{ justifyContent: 'start' }}>
+                        <Box paddingTop={3} paddingRight={4} paddingLeft={4} display="flex" sx={{ justifyContent: 'start' }}>
 
-                            <Box  display="flex" >
+                            <Box display="flex" >
                                 <Box paddingBottom={-2} paddingLeft={4}>
                                     <ProdutoDestaque
                                         url="https://cdn.shopify.com/s/files/1/0048/9508/0519/products/novacesta_540x.png?v=1606162938"
