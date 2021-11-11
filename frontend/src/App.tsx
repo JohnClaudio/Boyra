@@ -15,6 +15,8 @@ import Navbar from './components/estaticos/navbar/Navbar';
 import Categoria from './components/estaticos/menuCategoria/MenuCategoria';
 import Footer from './components/estaticos/footer/Footer';
 import CadastroUsuario from './pages/cadastroUsuario/CadastroUsuario';
+import CadastroProduto from './pages/cadastroProduto/CadastroProduto';
+import CadastroCategoria from './pages/cadastroCategoria/CadastroCategoria';
 import Produtos from './pages/produtos/Produtos';
 
 const theme = createTheme({
@@ -54,8 +56,15 @@ function App() {
 
 
               <Route path='/cadastroUsuario'>
-                <CadastroUsuario />
-                
+                <CadastroUsuario />              
+              </Route>
+
+              <Route path='/cadastroProduto'>
+                <CadastroProduto />              
+              </Route>
+
+              <Route path='/cadastroCategoria'>
+                <CadastroCategoria/>              
               </Route>
 
               <Route path='/login'>
