@@ -29,11 +29,11 @@ const Home = () => {
 
                 <Grid container direction="row" justifyContent='flex-end' alignItems='flex-end'  >
 
-                    <Grid item xs={6} container direction="row" justifyContent='center' alignItems='center' >
+                    <Grid item xs={12} md={6} sm={6} container direction="row" justifyContent='center' alignItems='center' >
 
                         <Box className='secondaryItem'>
                             <ProdutoDestaque
-                                url="https://cdn.shopify.com/s/files/1/0048/9508/0519/products/novacesta_540x.png?v=1606162938"
+                                url="https://cdn.shopify.com/s/files/1/0048/9508/0519/products/Kitxampu_540x.png?v=1602944441"
                                 title="Sabonetes Personalizados"
                                 height={tamanhoProduto2.altura}
                                 width={tamanhoProduto2.largura}
@@ -45,23 +45,30 @@ const Home = () => {
 
 
 
-                    <Grid item xs={6}   >
+                    <Grid item xs={12} md={6} sm={6}  >
 
 
 
 
+<<<<<<< HEAD
                         <Box paddingTop={3} paddingRight={4} paddingLeft={4} display="flex" sx={{ justifyContent: 'start' }}>
 
                             <Box display="flex" >
                                 <Box paddingBottom={-2} paddingLeft={4}>
+=======
+                        <Box display="flex" sx={{ justifyContent: 'start' }}>
+
+                            <Box display="flex">
+                                <Box >
+>>>>>>> 6861e8df14c612ca63b1d6fe3162e4f0e1a569c1
                                     <ProdutoDestaque
-                                        url="https://cdn.shopify.com/s/files/1/0048/9508/0519/products/novacesta_540x.png?v=1606162938"
+                                        url="https://cdn.shopify.com/s/files/1/0048/9508/0519/products/triofacial_540x.jpg?v=1619023593"
                                         title="Produto1"
                                         height={tamanhoProduto.altura}
                                         width={tamanhoProduto.largura}
                                     />
                                     <ProdutoDestaque
-                                        url="https://cdn.shopify.com/s/files/1/0048/9508/0519/products/novacesta_540x.png?v=1606162938"
+                                        url="https://cdn.shopify.com/s/files/1/0048/9508/0519/products/8_540x.png?v=1633532915"
                                         title="Produto1"
                                         height={tamanhoProduto.altura}
                                         width={tamanhoProduto.largura}
@@ -69,13 +76,13 @@ const Home = () => {
                                 </Box>
                                 <Box>
                                     <ProdutoDestaque
-                                        url="https://cdn.shopify.com/s/files/1/0048/9508/0519/products/novacesta_540x.png?v=1606162938"
+                                        url="https://cdn.shopify.com/s/files/1/0048/9508/0519/products/salgrosso_540x.jpg?v=1623855129"
                                         title="Produto1"
                                         height={tamanhoProduto.altura}
                                         width={tamanhoProduto.largura}
                                     />
                                     <ProdutoDestaque
-                                        url="https://cdn.shopify.com/s/files/1/0048/9508/0519/products/novacesta_540x.png?v=1606162938"
+                                        url="https://cdn.shopify.com/s/files/1/0048/9508/0519/products/CapturadeTela2020-11-10as16.29.08_540x.png?v=1633532545"
                                         title="Produto1"
                                         height={tamanhoProduto.altura}
                                         width={tamanhoProduto.largura}

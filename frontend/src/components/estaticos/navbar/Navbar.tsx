@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState, useEffect, ChangeEvent } from 'react';
 import { AppBar, Toolbar, Typography, Box, TextField, IconButton, Menu } from '@material-ui/core';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
+import useLocalStorage from 'react-use-localstorage';
 import './Navbar.css'
 
 import SearchIcon from '@material-ui/icons/Search';
@@ -13,12 +14,20 @@ import LogoutIcon from '@mui/icons-material/Logout';
 
 
 
-
-
 function Navbar() {
+
+    const [token, setToken] = useLocalStorage('token');
+    let history = useHistory();
+
+    function Lougout() {
+        setToken('');
+        history.push('/Login');
+        alert('Você deslogou')
+    }
+   
+    const statusLogado = token ? true : false ;
     return (
         <AppBar position="static" className="AppBar" elevation={0}>
-
 
             <Box sx={{ display: 'flex', justifyContent: 'center', mt: -2 }}>
 
@@ -56,7 +65,6 @@ function Navbar() {
                     </form>
                     <Box sx={{ ml: 10 }}>
 
-
                         <Link to='/login' className='tituloNavBar'>
                             <IconButton className="icon" color="secondary" >
                                 <PersonIcon className="icon" />
@@ -67,17 +75,20 @@ function Navbar() {
                             <ShoppingCartIcon className="icon" />
                         </IconButton>
 
-
-                       
-                            <IconButton className="icon" color="secondary" >
-                                <LogoutIcon className="icon" />
-                            </IconButton>
-                     
-
+                   
+                      
+     
+                            <Link to="/login">
+                            <IconButton onClick={Lougout} className="icon" color="secondary" >
+                                    <LogoutIcon className="icon" />
+                            </IconButton>    
+                            </Link>        
+          
+                        </Box>
                         
-
-
-                    </Box>
+                               
+                  
+         
 
 
 
