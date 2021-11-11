@@ -23,7 +23,6 @@ const Home = () => {
 
                 <Box sx={{ mt: 2 }}>
                     <Typography variant="h3" align="center" gutterBottom >Destaques</Typography>
-                    <hr></hr>
                 </Box>
 
 
@@ -50,17 +49,10 @@ const Home = () => {
 
 
 
-<<<<<<< HEAD
-                        <Box paddingTop={3} paddingRight={4} paddingLeft={4} display="flex" sx={{ justifyContent: 'start' }}>
-
-                            <Box display="flex" >
-                                <Box paddingBottom={-2} paddingLeft={4}>
-=======
                         <Box display="flex" sx={{ justifyContent: 'start' }}>
 
                             <Box display="flex">
                                 <Box >
->>>>>>> 6861e8df14c612ca63b1d6fe3162e4f0e1a569c1
                                     <ProdutoDestaque
                                         url="https://cdn.shopify.com/s/files/1/0048/9508/0519/products/triofacial_540x.jpg?v=1619023593"
                                         title="Produto1"
