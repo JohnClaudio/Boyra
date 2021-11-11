@@ -12,6 +12,7 @@ import br.org.generation.boyra.repository.ProdutoRepository;
 
 @RestController
 @RequestMapping("/produtos")
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 public class ProdutoController {
 
 	@Autowired
