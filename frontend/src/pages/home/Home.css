@@ -1,64 +1,64 @@
 .homeImagem{
-   margin-top: 2%;
-    width:100vw;
-    height: 400px;
-    background-image: url('https://guiadafarmacia.com.br/wp-content/uploads/2021/05/produtos-sustentaveis.jpg');
-    background-repeat: no-repeat;
-
-    background-position:center;
-    background-size: 100vw;
-    
-}
-
-.tituloHome{
-    margin-left:70%;
-    padding-top: 10%;
-    color:white;
-    text-shadow: 0px -0px 15px black;
-}
-img{display:block}
-
-.principalItem{
-    width:30vw;
-    height: 450;
-    border-radius: 30px;
-  
-}
-
-.secondaryItem{
-
+    margin-top: 2%;
+     width:100vw;
+     height: 400px;
+     background-image: url('https://guiadafarmacia.com.br/wp-content/uploads/2021/05/produtos-sustentaveis.jpg');
+     background-repeat: no-repeat;
  
-}
-.flexcard{
-    display: flex;
-    flex-wrap: wrap;
-}
-.card{
-    height: 300px;
-    padding:5px;
-    min-width: 190px; 
-    margin-bottom: 5%;   
-    } 
-    .card> img{      
-    width: 300px;
-    height: 250px;;
-    max-width: 300px;
-    }     
-    .price{
-    font-size: 20px;
-    color: #5CA720;
-    font-weight: 400;
-    }
-    .description{
-    font-size: 14px;
-    color: black;
+     background-position:center;
+     background-size: 100vw;
+     
+ }
+ 
+ .tituloHome{
+     margin-left:70%;
+     padding-top: 10%;
+     color:white;
+     text-shadow: 0px -0px 15px black;
+ }
+ img{display:block}
+ 
+ .principalItem{
+     width:30vw;
+     height: 450;
+     border-radius: 30px;
    
-    overflow-wrap:break-word;
-    overflow: visible;
-    max-width: 200px;
-    }
-
-.aux{
-    background:#65B1C2;
-    color:white;
-}
+ }
+ 
+ .secondaryItem{
+ 
+  
+ }
+ .flexcard{
+     display: flex;
+     flex-wrap: wrap;
+ }
+ .card{
+     height: 300px;
+     padding:5px;
+     min-width: 190px; 
+     margin-bottom: 5%;   
+     } 
+     .card> img{      
+     width: 300px;
+     height: 250px;;
+     max-width: 300px;
+     }     
+     .price{
+     font-size: 20px;
+     color: #5CA720;
+     font-weight: 400;
+     }
+     .description{
+     font-size: 14px;
+     color: black;
+    
+     overflow-wrap:break-word;
+     overflow: visible;
+     max-width: 200px;
+     }
+ 
+ .aux{
+     background:#65B1C2;
+     color:white;
+ }
