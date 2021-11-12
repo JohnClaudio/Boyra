@@ -5,6 +5,7 @@ import './cadastroCategoria.css'
 import Categoria from '../../models/Categoria';
 import { Button, Grid, TextField, Typography, Box } from '@material-ui/core';
 import { cadastroCategoria } from '../../services/Service';
+import { toast } from 'react-toastify';
 
 
 function CadastroCategoria() {
@@ -17,7 +18,17 @@ function CadastroCategoria() {
 
     useEffect(() => {
         if (token == "") {
-            alert("É necessário estar logado para criar nova categoria!")
+            toast.error('É necessário estar logado para criar nova categoria!', {
+                position: "top-right",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: false,
+                theme: "colored",
+                progress: undefined,
+            });
+            
             history.push("/login")
         }
     }, [token])
@@ -49,7 +60,16 @@ function CadastroCategoria() {
         })
         console.log(categoria)
         console.log(token)
-        alert('Categoria cadastrada com sucesso!!')
+        toast.success('Categoria cadastrada com sucesso!', {
+            position: "top-right",
+            autoClose: 2000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: false,
+            draggable: false,
+            theme: "colored",
+            progress: undefined,
+        });
 }
 
 

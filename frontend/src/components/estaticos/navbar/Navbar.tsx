@@ -12,6 +12,7 @@ import DeleteIcon from '@material-ui/icons/Delete';
 import MenuIcon from '@mui/icons-material/Menu';
 import LogoutIcon from '@mui/icons-material/Logout';
 import HomeIcon from '@mui/icons-material/Home';
+import {toast} from 'react-toastify'
 
 
 
@@ -24,7 +25,16 @@ function Navbar() {
     function Lougout() {
         setToken('');
         history.push('/Login');
-        alert('Você deslogou')
+        toast.info('Você deslogou', {
+            position: "top-right",
+            autoClose: 2000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: false,
+            draggable: false,
+            theme: "colored",
+            progress: undefined,
+        });
     }
    
     const statusLogado = token ? true : false ;

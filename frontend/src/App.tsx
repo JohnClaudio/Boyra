@@ -2,6 +2,8 @@ import { BrowserRouter as Router, Route, Switch, } from 'react-router-dom';
 import { createTheme, ThemeProvider } from '@material-ui/core'
 import React from 'react';
 import './App.css';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 /*
 import Footer from './components/estaticos/Footer/Footer';
@@ -38,6 +40,7 @@ function App() {
   return (
     <>
       <ThemeProvider theme={theme}>
+        <ToastContainer />
         <Router>
           <Switch>
 

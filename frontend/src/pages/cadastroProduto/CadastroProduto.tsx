@@ -6,6 +6,7 @@ import Categoria from '../../models/Categoria';
 import useLocalStorage from 'react-use-localstorage';
 import Produto from '../../models/Produto';
 import { busca, buscaId, post} from '../../services/Service'
+import { toast } from 'react-toastify';
 
 function CadastroProduto() {
     let history = useHistory();
@@ -15,7 +16,16 @@ function CadastroProduto() {
 
     useEffect(() => {
         if (token == "") {
-            alert("Você precisa estar logado")
+            toast.error('Você precisa estar logado', {
+                position: "top-right",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: false,
+                theme: "colored",
+                progress: undefined,
+            });
             history.push("/login")
 
         }
@@ -93,7 +103,16 @@ function CadastroProduto() {
                     'Authorization': token
                 }
             })
-            alert('Produto cadastrado com sucesso');
+            toast.success('Produto cadastrado com sucesso', {
+                position: "top-right",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: false,
+                theme: "colored",
+                progress: undefined,
+            });
         }
         console.log(produto)
         console.log(token)
