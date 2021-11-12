@@ -18,6 +18,7 @@ import CadastroUsuario from './pages/cadastroUsuario/CadastroUsuario';
 import CadastroProduto from './pages/cadastroProduto/CadastroProduto';
 import CadastroCategoria from './pages/cadastroCategoria/CadastroCategoria';
 import Produtos from './pages/produtos/Produtos';
+import ListaCategoria  from './pages/listaCategoria/ListaCategoria';
 
 const theme = createTheme({
   palette: {
@@ -67,6 +68,10 @@ function App() {
                 <CadastroCategoria/>              
               </Route>
 
+              <Route path='/listaCategoria'>
+                <ListaCategoria />              
+              </Route>
+
               <Route path='/login'>
                 <Login />
                 <Footer/>
@@ -75,7 +80,6 @@ function App() {
               <Route exact path='/produtos'>
                 <Produtos />
                 <Footer/>
-               
               </Route>
 
 
@@ -85,7 +89,6 @@ function App() {
                 <Footer/>
               </Route>
 
-       
             </div>
 
           </Switch>

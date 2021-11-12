@@ -1,0 +1,33 @@
+.flexcard{
+    display: flex;
+    flex-wrap: wrap;
+}
+.card{
+    height: 300px;
+    padding:5px;
+    min-width: 190px; 
+    margin-bottom: 5%;   
+    } 
+    .cardImagem{      
+    width: 300px;
+    height: 250px;;
+    max-width: 300px;
+    }     
+    .price{
+    font-size: 20px;
+    color: #5CA720;
+    font-weight: 400;
+    }
+    .description{
+    font-size: 14px;
+    color: black;
+   
+    overflow-wrap:break-word;
+    overflow: visible;
+    max-width: 200px;
+    }
+
+.aux{
+    background:#65B1C2;
+    color:white;
+}
