@@ -11,6 +11,8 @@ import Icon from '@mui/material/Icon'
 import DeleteIcon from '@material-ui/icons/Delete';
 import MenuIcon from '@mui/icons-material/Menu';
 import LogoutIcon from '@mui/icons-material/Logout';
+import HomeIcon from '@mui/icons-material/Home';
+
 
 
 
@@ -64,6 +66,16 @@ function Navbar() {
                         </Box>
                     </form>
                     <Box sx={{ ml: 10 }}>
+
+                         <IconButton className="icon" color="secondary" >
+                                <MenuIcon className="icon" />
+                            </IconButton>
+                            
+                            <Link to='/home' className='tituloNavBar'>
+                             <IconButton className="icon" color="secondary" >
+                                <HomeIcon className="icon" />
+                            </IconButton>
+                            </Link>
 
                         <Link to='/login' className='tituloNavBar'>
                             <IconButton className="icon" color="secondary" >

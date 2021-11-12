@@ -2,6 +2,7 @@ import { Grid, Box, Typography, Button } from '@material-ui/core';
 import React from 'react';
 import './Home.css';
 import ProdutoDestaque from '../../components/estaticos/produtoDestaque/ProdutoDestaque';
+import CarouselComponent from '../../components/carousel/CarouselComponent';
 
 
 
@@ -13,13 +14,13 @@ const Home = () => {
     return (
         <>
             <Box>
-                <Box className="homeImagem" >
-
-                    <Box className="tituloHome">
-                        <Typography className="roboto" variant="h4">Qualidade e Sustentabilidade</Typography>
+                
+                <Grid xs={12} >
+                    <Box marginTop={5} padding={2}>
+                        <CarouselComponent />
                     </Box>
+                </Grid>
 
-                </Box>
 
                 <Box sx={{ mt: 2 }}>
                     <Typography variant="h3" align="center" gutterBottom >Destaques</Typography>
