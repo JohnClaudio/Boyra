@@ -12,9 +12,8 @@ import DeleteIcon from '@material-ui/icons/Delete';
 import MenuIcon from '@mui/icons-material/Menu';
 import LogoutIcon from '@mui/icons-material/Logout';
 import HomeIcon from '@mui/icons-material/Home';
-import {toast} from 'react-toastify'
-
-
+import GroupIcon from '@mui/icons-material/Group';
+import { toast } from 'react-toastify'
 
 
 function Navbar() {
@@ -36,14 +35,19 @@ function Navbar() {
             progress: undefined,
         });
     }
-   
-    const statusLogado = token ? true : false ;
+
+    const statusLogado = token ? true : false;
     return (
         <AppBar position="static" className="AppBar" elevation={0}>
 
             <Box sx={{ display: 'flex', justifyContent: 'center', mt: -2 }}>
 
                 <Toolbar variant="dense"  >
+
+                    <IconButton className="icon" color="secondary" >
+                        <MenuIcon className="icon" />
+                    </IconButton>
+
 
                     <Box style={{ cursor: "pointer", flexGrow: 1 }} pr={5} >
 
@@ -77,15 +81,13 @@ function Navbar() {
                     </form>
                     <Box sx={{ ml: 10 }}>
 
-                         <IconButton className="icon" color="secondary" >
-                                <MenuIcon className="icon" />
-                            </IconButton>
-                            
-                            <Link to='/home' className='tituloNavBar'>
-                             <IconButton className="icon" color="secondary" >
+
+
+                        <Link to='/home' className='tituloNavBar'>
+                            <IconButton className="icon" color="secondary" >
                                 <HomeIcon className="icon" />
                             </IconButton>
-                            </Link>
+                        </Link>
 
                         <Link to='/login' className='tituloNavBar'>
                             <IconButton className="icon" color="secondary" >
@@ -97,20 +99,28 @@ function Navbar() {
                             <ShoppingCartIcon className="icon" />
                         </IconButton>
 
-                   
-                      
-     
-                            <Link to="/login">
+                        <Link to="/SobreNos">
+                            <IconButton className="icon" color="secondary" >
+                                <GroupIcon className="icon" />
+                            </IconButton>
+                        </Link>
+
+
+                        <Link to="/login">
                             <IconButton onClick={Lougout} className="icon" color="secondary" >
-                                    <LogoutIcon className="icon" />
-                            </IconButton>    
-                            </Link>        
-          
-                        </Box>
-                        
-                               
-                  
-         
+                                <LogoutIcon className="icon" />
+                            </IconButton>
+                        </Link>
+
+
+
+                    </Box>
+
+
+
+
+
+
 
 
 

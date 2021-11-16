@@ -21,6 +21,8 @@ import CadastroProduto from './pages/cadastroProduto/CadastroProduto';
 import CadastroCategoria from './pages/cadastroCategoria/CadastroCategoria';
 import Produtos from './pages/produtos/Produtos';
 import ListaCategoria  from './pages/listaCategoria/ListaCategoria';
+import sobreNos from './pages/sobreNos/SobreNos';
+import SobreNos from './pages/sobreNos/SobreNos';
 
 const theme = createTheme({
   palette: {
@@ -84,6 +86,13 @@ function App() {
                 <Produtos />
                 <Footer/>
               </Route>
+
+              <Route exact path='/sobrenos'>
+                <SobreNos />
+                <Footer/>
+              </Route>
+
+
 
 
 
