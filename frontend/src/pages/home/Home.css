@@ -35,7 +35,7 @@
  }
  .card{
      height: 300px;
-     padding:5px;
+     padding:10px;
      min-width: 190px; 
      margin-bottom: 5%;   
      } 
@@ -49,6 +49,12 @@
      color: #5CA720;
      font-weight: 400;
      }
+     .price_old{
+        font-size: 20px;
+        color: #2c2e2a;
+        text-decoration: line-through;
+        font-size: 15px;
+        }
      .description{
      font-size: 14px;
      color: black;

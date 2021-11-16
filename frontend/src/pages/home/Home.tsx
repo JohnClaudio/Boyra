@@ -9,10 +9,14 @@ import CarouselComponent from '../../components/carousel/CarouselComponent';
 
 const Home = () => {
 
-    const tamanhoProduto = { altura: '230px', largura: '250px' }
+    const tamanhoProduto = { altura: '400px', largura: '400px' }
     const tamanhoProduto2 = { altura: '500px', largura: '600px' }
     return (
         <>
+         <Grid container>
+
+            <Grid item xs={12}>
+
             <Box>
                 
                 <Grid xs={12} >
@@ -23,75 +27,53 @@ const Home = () => {
 
 
                 <Box sx={{ mt: 2 }}>
-                    <Typography variant="h3" align="center" gutterBottom >Destaques</Typography>
+                    
+                    <Typography color="primary" variant="h3" align="center" gutterBottom >Feitos pra você</Typography>
                 </Box>
 
+                <Grid container direction="row" justifyContent='center' alignItems='center'  >
 
-                <Grid container direction="row" justifyContent='flex-end' alignItems='flex-end'  >
+<Grid item xs={12} md={6} sm={6}  >
 
-                    <Grid item xs={12} md={6} sm={6} container direction="row" justifyContent='center' alignItems='center' >
+    <Box display="flex" sx={{ justifyContent: 'center' }}>
 
-                        <Box className='secondaryItem'>
-                            <ProdutoDestaque
-                                url="https://cdn.shopify.com/s/files/1/0048/9508/0519/products/Kitxampu_540x.png?v=1602944441"
-                                title="Sabonetes Personalizados"
-                                height={tamanhoProduto2.altura}
-                                width={tamanhoProduto2.largura}
-                            />
-                        </Box>
+        <Box display="flex" >
 
-                    </Grid>
+                <ProdutoDestaque
+                    url="https://cdn.shopify.com/s/files/1/0048/9508/0519/products/triofacial_540x.jpg?v=1619023593"
+                    title="Cabelo"
+                    height={tamanhoProduto.altura}
+                    width={tamanhoProduto.largura}
+                />
 
-
-
-
-                    <Grid item xs={12} md={6} sm={6}  >
-
-
-
-
-                        <Box display="flex" sx={{ justifyContent: 'start' }}>
-
-                            <Box display="flex">
-                                <Box >
-                                    <ProdutoDestaque
-                                        url="https://cdn.shopify.com/s/files/1/0048/9508/0519/products/triofacial_540x.jpg?v=1619023593"
-                                        title="Produto1"
-                                        height={tamanhoProduto.altura}
-                                        width={tamanhoProduto.largura}
-                                    />
-                                    <ProdutoDestaque
-                                        url="https://cdn.shopify.com/s/files/1/0048/9508/0519/products/8_540x.png?v=1633532915"
-                                        title="Produto1"
-                                        height={tamanhoProduto.altura}
-                                        width={tamanhoProduto.largura}
-                                    />
-                                </Box>
-                                <Box>
-                                    <ProdutoDestaque
-                                        url="https://cdn.shopify.com/s/files/1/0048/9508/0519/products/salgrosso_540x.jpg?v=1623855129"
-                                        title="Produto1"
-                                        height={tamanhoProduto.altura}
-                                        width={tamanhoProduto.largura}
-                                    />
-                                    <ProdutoDestaque
-                                        url="https://cdn.shopify.com/s/files/1/0048/9508/0519/products/CapturadeTela2020-11-10as16.29.08_540x.png?v=1633532545"
-                                        title="Produto1"
-                                        height={tamanhoProduto.altura}
-                                        width={tamanhoProduto.largura}
-                                    />
-                                </Box>
-                            </Box>
+                <ProdutoDestaque
+                    url="https://cdn.shopify.com/s/files/1/0048/9508/0519/products/8_540x.png?v=1633532915"
+                    title="Rosto"
+                    height={tamanhoProduto.altura}
+                    width={tamanhoProduto.largura}
+                />
+   
+      
+                <ProdutoDestaque
+                    url="https://cdn.shopify.com/s/files/1/0048/9508/0519/products/salgrosso_540x.jpg?v=1623855129"
+                    title="Corpo"
+                    height={tamanhoProduto.altura}
+                    width={tamanhoProduto.largura}
+                />
+     
+          
+        </Box>
 
 
 
 
-                        </Box>
+    </Box>
 
 
 
-                    </Grid>
-                </Grid>
+</Grid>
+</Grid>
+    
 
                 <Box marginTop={0}>
                     <Typography variant="h3" align="center" gutterBottom >Novidades</Typography>
@@ -99,65 +81,96 @@ const Home = () => {
                 <Grid container direction="row" justifyContent='center' alignItems='center'  >
                     <Grid item xs={8}  >
                         <Box display="flex" className="flexcard" sx={{ mt: 5 }}>
-                            <Box className="card">
+                       
+                        <Box className="card">
                                 <img src="https://cdn.shopify.com/s/files/1/0048/9508/0519/products/triofacial_540x.jpg?v=1619023593" alt="" />
                                 <p className="description">lorem lorem lorem lorem</p>
-                                <label className="price">R$: 50</label>
+                                <div>
+                                <label className="price_old">R$: 158,00 </label>
+                                <label className="price">R$: 50 PROMOÇÃO!</label>
+                                </div>
                             </Box>
 
                             <Box className="card">
                                 <img src="https://cdn.shopify.com/s/files/1/0048/9508/0519/products/triofacial_540x.jpg?v=1619023593" alt="" />
                                 <p className="description">lorem lorem lorem lorem</p>
-                                <label className="price">R$: 50</label>
+                                <div>
+                                <label className="price_old">R$: 158,00 </label>
+                                <label className="price">R$: 50 PROMOÇÃO!</label>
+                                </div>
                             </Box>
 
                             <Box className="card">
                                 <img src="https://cdn.shopify.com/s/files/1/0048/9508/0519/products/triofacial_540x.jpg?v=1619023593" alt="" />
                                 <p className="description">lorem lorem lorem lorem</p>
-                                <label className="price">R$: 50</label>
+                                <div>
+                                <label className="price_old">R$: 158,00 </label>
+                                <label className="price">R$: 50 PROMOÇÃO!</label>
+                                </div>
                             </Box>
 
                             <Box className="card">
                                 <img src="https://cdn.shopify.com/s/files/1/0048/9508/0519/products/triofacial_540x.jpg?v=1619023593" alt="" />
                                 <p className="description">lorem lorem lorem lorem</p>
-                                <label className="price">R$: 50</label>
+                                <div>
+                                <label className="price_old">R$: 158,00 </label>
+                                <label className="price">R$: 50 PROMOÇÃO!</label>
+                                </div>
                             </Box>
 
                             <Box className="card">
                                 <img src="https://cdn.shopify.com/s/files/1/0048/9508/0519/products/triofacial_540x.jpg?v=1619023593" alt="" />
                                 <p className="description">lorem lorem lorem lorem</p>
-                                <label className="price">R$: 50</label>
+                                <div>
+                                <label className="price_old">R$: 158,00 </label>
+                                <label className="price">R$: 50 PROMOÇÃO!</label>
+                                </div>
                             </Box>
 
                             <Box className="card">
                                 <img src="https://cdn.shopify.com/s/files/1/0048/9508/0519/products/triofacial_540x.jpg?v=1619023593" alt="" />
                                 <p className="description">lorem lorem lorem lorem</p>
-                                <label className="price">R$: 50</label>
+                                <div>
+                                <label className="price_old">R$: 158,00 </label>
+                                <label className="price">R$: 50 PROMOÇÃO!</label>
+                                </div>
                             </Box>
 
 
                             <Box className="card">
                                 <img src="https://cdn.shopify.com/s/files/1/0048/9508/0519/products/triofacial_540x.jpg?v=1619023593" alt="" />
                                 <p className="description">lorem lorem lorem lorem</p>
-                                <label className="price">R$: 50</label>
+                                <div>
+                                <label className="price_old">R$: 158,00 </label>
+                                <label className="price">R$: 50 PROMOÇÃO!</label>
+                                </div>
                             </Box>
 
                             <Box className="card">
                                 <img src="https://cdn.shopify.com/s/files/1/0048/9508/0519/products/triofacial_540x.jpg?v=1619023593" alt="" />
                                 <p className="description">lorem lorem lorem lorem</p>
-                                <label className="price">R$: 50</label>
+                                <div>
+                                <label className="price_old">R$: 158,00 </label>
+                                <label className="price">R$: 50 PROMOÇÃO!</label>
+                                </div>
                             </Box>
 
                             <Box className="card">
                                 <img src="https://cdn.shopify.com/s/files/1/0048/9508/0519/products/triofacial_540x.jpg?v=1619023593" alt="" />
                                 <p className="description">lorem lorem lorem lorem</p>
-                                <label className="price">R$: 50</label>
+                                <div>
+                                <label className="price_old">R$: 158,00 </label>
+                                <label className="price">R$: 50 PROMOÇÃO!</label>
+                                </div>
                             </Box>
 
                             <Box className="card">
                                 <img src="https://cdn.shopify.com/s/files/1/0048/9508/0519/products/triofacial_540x.jpg?v=1619023593" alt="" />
                                 <p className="description">lorem lorem lorem lorem</p>
-                                <label className="price">R$: 50</label>
+                                <div>
+                                <label className="price_old">R$: 158,00 </label>
+                                <label className="price">R$: 50 PROMOÇÃO!</label>
+                                </div>
                             </Box>
 
 
@@ -167,10 +180,12 @@ const Home = () => {
                     </Grid>
                 </Grid>
             </Box>
+    
 
 
 
-
+       </Grid>
+                </Grid>
 
         </>
     )

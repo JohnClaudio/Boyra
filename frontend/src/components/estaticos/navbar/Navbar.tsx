@@ -1,5 +1,5 @@
 import React, { useState, useEffect, ChangeEvent } from 'react';
-import { AppBar, Toolbar, Typography, Box, TextField, IconButton, Menu } from '@material-ui/core';
+import {Grid,  AppBar, Toolbar, Typography, Box, TextField, IconButton, Menu } from '@material-ui/core';
 import { Link, useHistory } from 'react-router-dom';
 import useLocalStorage from 'react-use-localstorage';
 import './Navbar.css'
@@ -39,6 +39,10 @@ function Navbar() {
    
     const statusLogado = token ? true : false ;
     return (
+
+    <Grid container>
+    <Grid item xs={12}>
+          
         <AppBar position="static" className="AppBar" elevation={0}>
 
             <Box sx={{ display: 'flex', justifyContent: 'center', mt: -2 }}>
@@ -52,24 +56,27 @@ function Navbar() {
                     </Box>
                     <Box sx={{ display: 'flex', justifyContent: 'center', }}>
 
-                        <Link to='/home' className='tituloNavBar'>
-                            <Typography variant='subtitle1' gutterBottom align='center' >Inicio</Typography>
-                        </Link>
+                        <ul>
+                        
+                            <Link to='/home' className='tituloNavBar'>
+                            <li>Inicio</li>
+                            </Link>
 
-                        <Link to='/produtos' className='tituloNavBar'>
-                            <Typography variant='subtitle1' gutterBottom align='center' >Produtos</Typography>
-                        </Link>
-
-                        <Link to='/contato' className='tituloNavBar'>
-                            <Typography variant='subtitle1' gutterBottom align='center' >Contatos</Typography>
-                        </Link>
+                            <Link to='/produtos' className='tituloNavBar'>
+                            <li>Produtos</li>
+                            </Link>
+                  
+                            <Link to='/contato' className='tituloNavBar'>
+                            <li>Contatos</li>
+                            </Link>
+                        </ul>
+             
 
                     </Box>
 
                     <form>
                         <Box sx={{ display: 'flex', justifyContent: 'end', flexGrow: 1 }} className="searchMenu">
-
-                            <input className='inputNavBar'></input>
+                            <input type="text" className='inputNavBar'></input>
                             <IconButton className="icon" color='secondary'>
                                 <SearchIcon className="icon" />
                             </IconButton>
@@ -96,9 +103,6 @@ function Navbar() {
                         <IconButton color="secondary" aria-label="upload picture" component="span">
                             <ShoppingCartIcon className="icon" />
                         </IconButton>
-
-                   
-                      
      
                             <Link to="/login">
                             <IconButton onClick={Lougout} className="icon" color="secondary" >
@@ -118,7 +122,11 @@ function Navbar() {
 
                 </Toolbar>
             </Box>
-        </AppBar>);
+
+        </AppBar>
+        </Grid>
+           </Grid>
+        );
 }
 
 export default Navbar

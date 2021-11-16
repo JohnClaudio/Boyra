@@ -45,6 +45,9 @@ function Footer() {
 
     const classes = useStyles();
     return (
+        <Grid container>
+
+        <Grid item xs={12}>
         <footer className={classes.root}>
             <Grid container direction="row" justifyContent="center" alignItems="center" >
 
@@ -82,7 +85,8 @@ function Footer() {
                 </Grid>
             </Grid>
         </footer>
-
+       </Grid>
+       </Grid>
     )
 }
 

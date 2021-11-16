@@ -46,7 +46,7 @@ function App() {
 
             <div>
               <Navbar />
-              <Categoria />
+          
 
               <Route exact path='/'>
                 <Home />
