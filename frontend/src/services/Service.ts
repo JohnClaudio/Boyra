@@ -53,5 +53,7 @@ export const api = axios.create({
 
     }
 
-    
+    export const deletarId = async(url: any,header: any) => { 
+        await api.delete(url,header)
+    }
 

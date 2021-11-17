@@ -23,6 +23,7 @@ import Produtos from './pages/produtos/Produtos';
 import ListaCategoria  from './pages/listaCategoria/ListaCategoria';
 import ListaProduto from './pages/listaProduto/ListaProduto';
 import DeletarProduto from './pages/deletarProduto/DeletarProduto';
+import DeleteCategoria from './pages/deleteCategoria/DeleteCategoria';
 
 const theme = createTheme({
   palette: {
@@ -46,7 +47,6 @@ function App() {
         <Router>
           <Switch>
           <div style={{ minHeight: '100vh', maxWidth:'100vw'}}>
-           
               <Navbar />
           
               <Route exact path='/'>
@@ -99,6 +99,14 @@ function App() {
             <CadastroProduto />
           </Route>
 
+          <Route exact path='/formularioCategoria'>
+            <CadastroCategoria/>
+          </Route>
+
+          <Route exact path='/formularioCategoria/:id'>
+            <CadastroCategoria />
+          </Route>
+
           <Route path='/deletarProduto/:id'>
             <DeletarProduto />
           </Route>
@@ -107,6 +115,11 @@ function App() {
                 <Contato />
                 <Footer/>
               </Route>
+
+              <Route exact path='/deletarCategoria/:id'>
+                <DeleteCategoria />
+              </Route>
+
 
             </div>
 

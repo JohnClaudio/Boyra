@@ -5,6 +5,7 @@ import useLocalStorage from 'react-use-localstorage';
 import {useHistory} from 'react-router-dom';
 import { listaCategoria } from '../../services/Service';
 import Categoria from '../../models/Categoria';
+import { toast } from 'react-toastify';
 
 function ListaCategoria() {
     let history = useHistory();
@@ -13,21 +14,31 @@ function ListaCategoria() {
     const [token, setToken] = useLocalStorage('token');
     
 
-    useEffect(()=>{
-        if(token == ''){
-        alert("VocÃª precisa estar logado")
+    useEffect(() => {
+        if (token == "") {
+        toast.error('Você precisa estar logado', {
+            position: "top-right",
+            autoClose: 2000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: false,
+            draggable: false,
+            theme: "colored",
+            progress: undefined,
+        });
         history.push("/login")
+
         }
     }, [token])
 
 
     async function getCategoria(){
-        await listaCategoria("/categoria", setCategorias, {
-        headers: {
-            'Authorization': token
+        await listaCategoria("/categoria", setCategorias,{
+            headers: {
+                'Authorization': token
+            }
+            })
         }
-        })
-    }
 
 
     useEffect(()=>{
@@ -42,26 +53,27 @@ function ListaCategoria() {
         {
         categorias.map(categoria =>(
         <Box m={2} >
+
             <Card variant="outlined">
             <CardContent>
                 <Typography color="textSecondary" gutterBottom>
                 Categoria
                 </Typography>
                 <Typography variant="h5" component="h2">
-                {categoria.descricao}
+                {categoria.nome}
                 </Typography>
             </CardContent>
             <CardActions>
                 <Box display="flex" justifyContent="center" mb={1.5} >
 
-                <Link to={`/formularioTema/${categoria.id}`} className="text-decorator-none">
+                <Link to={`formularioCategoria/${categoria.id}`} className="text-decorator-none">
                     <Box mx={1}>
                     <Button variant="contained" className="marginLeft" size='small' color="primary" >
                         atualizar
                     </Button>
                     </Box>
                 </Link>
-                <Link to={`/deletarTema/${categoria.id}`} className="text-decorator-none">
+                <Link to={`/deletarcategoria/${categoria.id}`} className="text-decorator-none">
                     <Box mx={1}>
                     <Button variant="contained" size='small' color="secondary">
                         deletar

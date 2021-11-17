@@ -4,7 +4,7 @@ import useLocalStorage from 'react-use-localstorage';
 import './cadastroCategoria.css'
 import Categoria from '../../models/Categoria';
 import { Button, Grid, TextField, Typography, Box } from '@material-ui/core';
-import { cadastroCategoria } from '../../services/Service';
+import { cadastroCategoria, put, post} from '../../services/Service';
 import { toast } from 'react-toastify';
 
 
@@ -33,9 +33,13 @@ function CadastroCategoria() {
         }
     }, [token])
 
+
+
+
+    const idNumber = parseInt (id)
     const [categoria, setCategoria] = useState<Categoria>({  // armazena uma categoria especifico de acordo com ID
         descricao: '',
-        id: 0,
+        id: idNumber,
         nome: '',
         palavraChave: '',
     })
@@ -52,26 +56,49 @@ function CadastroCategoria() {
     
     async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
         e.preventDefault()
-        cadastroCategoria(`/categoria`, categoria, setCategoria,
-        {
-            headers: {
-            'Authorization': token
-            }
-        })
-        console.log(categoria)
-        console.log(token)
-        toast.success('Categoria cadastrada com sucesso!', {
-            position: "top-right",
-            autoClose: 2000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: false,
-            draggable: false,
-            theme: "colored",
-            progress: undefined,
-        });
-}
+        console.log(categoria.id)
+        console.log(categoria.nome)
 
+        if (id !== undefined) {
+            put(`/categoria`, categoria, setCategoria, {
+                headers: {
+                    'Authorization': token
+                }
+            })
+            toast.success('Categoria atualizada com sucesso', {
+                position: "top-right",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: false,
+                theme: "colored",
+                progress: undefined,
+            });
+        } else {
+            post(`/categoria`, categoria, setCategoria, {
+                headers: {
+                    'Authorization': token
+                }
+            })
+            toast.success('Categoria cadastrada com sucesso', {
+                position: "top-right",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: false,
+                theme: "colored",
+                progress: undefined,
+            });
+        }
+        back()
+
+    }
+
+    function back() {
+        history.push('/listaCategoria')
+    }
 
     return (
         <div>  
@@ -104,4 +131,4 @@ function CadastroCategoria() {
 );
 }
 
-export default CadastroCategoria;
+export default CadastroCategoria
