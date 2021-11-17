@@ -15,7 +15,7 @@
     }     
     .price{
     font-size: 20px;
-    color: #5CA720;
+    color: #6CB9C9;
     font-weight: 400;
     }
     .description{
@@ -30,4 +30,9 @@
 .aux{
     background:#65B1C2;
     color:white;
+}
+
+.loading{
+    display: flex;
+    
 }

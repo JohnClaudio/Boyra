@@ -13,8 +13,8 @@ import { height } from '@mui/system';
 const useStyles = makeStyles({
 
     root: {
-        width: '100vw',
-        height: '300',
+      
+        height: '300px',
         background: '#F9F9F9',
         marginTop: '5%'
     },
@@ -37,7 +37,6 @@ const useStyles = makeStyles({
         height: '45px',
         marginTop: 15,
     }
-
 
 })
 

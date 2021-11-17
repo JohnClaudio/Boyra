@@ -46,15 +46,15 @@
      }     
      .price{
      font-size: 20px;
-     color: #5CA720;
-     font-weight: 400;
+     color: #6CB9C9;
+     font-weight: 500;
      }
-     .price_old{
+    .price_old{
         font-size: 20px;
         color: #2c2e2a;
         text-decoration: line-through;
         font-size: 15px;
-        }
+    }
      .description{
      font-size: 14px;
      color: black;
@@ -67,4 +67,12 @@
  .aux{
      background:#65B1C2;
      color:white;
+ }
+ .MuiToolbar-root{
+     width:90vw;
+     justify-content: center;
+ }
+ .titlebold{
+     font-weight: 400!important;
+     color:#65B1C2;
  }

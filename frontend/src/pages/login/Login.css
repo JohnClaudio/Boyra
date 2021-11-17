@@ -12,3 +12,34 @@
     max-width: 100%;
     margin: auto;
 }
+
+.boxLogin{
+margin-top: 15%!important;
+margin:auto;
+color:rgb(0, 0, 0);
+ width: 50%;
+ min-width: 300px;
+
+ border-radius: 40px;
+}
+.MuiPaper-elevation4{
+    border-bottom: 5px solid rgba(238, 241, 240, 0.57);
+}
+.labelText{
+
+}
+
+.MuiOutlinedInput-root{
+    width: 50%;  
+}
+
+.boxLogin input{
+
+     width: 50%;
+
+    }
+    
+
+.MuiButton-containedPrimary{
+    color:white!important;
+}

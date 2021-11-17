@@ -28,6 +28,7 @@ const Produtos = () => {
 
     return (
         <>
+              
             <Grid container direction="row" justifyContent='center' alignItems='center'  >
                 <Grid item xs={8}  >
                     <Box display="flex" className="flexcard" sx={{ mt: 5 }}>

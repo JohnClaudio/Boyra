@@ -43,57 +43,50 @@ function Navbar() {
     <Grid container>
     <Grid item xs={12}>
           
-        <AppBar position="static" className="AppBar" elevation={0}>
+        <AppBar position="static" className="AppBar" >
+            <Box sx={{ display: 'flex', justifyContent: 'center', pt:1  }}>
 
-            <Box sx={{ display: 'flex', justifyContent: 'center', mt: -2 }}>
-
-                <Toolbar variant="dense"  >
-
-                    <Box style={{ cursor: "pointer", flexGrow: 1 }} pr={5} >
-
-                        <img className="logoNavBar" src="./images/LOGO3.png" alt="" />
-
-                    </Box>
-                    <Box sx={{ display: 'flex', justifyContent: 'center', }}>
-
-                        <ul>
-                        
-                            <Link to='/home' className='tituloNavBar'>
-                            <li>Inicio</li>
-                            </Link>
-
-                            <Link to='/produtos' className='tituloNavBar'>
-                            <li>Produtos</li>
-                            </Link>
-                  
-                            <Link to='/contato' className='tituloNavBar'>
-                            <li>Contatos</li>
-                            </Link>
-                        </ul>
-             
-
-                    </Box>
-
+                <Toolbar variant="dense" >
+                       
+           
+           
+                <Box  sx={{ display: 'flex', justifyContent: 'end', flexGrow: 0 }}>
+                <img className="" src="./images/LOGO.png" alt="" />
                     <form>
-                        <Box sx={{ display: 'flex', justifyContent: 'end', flexGrow: 1 }} className="searchMenu">
+                        <Box  className="searchMenu">
                             <input type="text" className='inputNavBar'></input>
-                            <IconButton className="icon" color='secondary'>
+                            <Box sx={{ display: 'flex', justifyContent: 'flex-end', }}>
+                            <ul className="menu_list">
+                                <Link to='/home' className='tituloNavBar'>
+                                <li>Inicio</li>
+                                </Link>
+                                <Link to='/produtos' className='tituloNavBar'>
+                                <li>Produtos</li>
+                                </Link>
+                                <Link to='/contato' className='tituloNavBar'>
+                                <li>Contatos</li>
+                                </Link>
+                            </ul>
+
+</Box>
+
+                        </Box>
+                        
+                    </form>
+                    <IconButton className="icon" color='secondary'>
                                 <SearchIcon className="icon" />
                             </IconButton>
-                        </Box>
-                    </form>
-                    <Box sx={{ ml: 10 }}>
 
-                         <IconButton className="icon" color="secondary" >
-                                <MenuIcon className="icon" />
-                            </IconButton>
+                   
+</Box>
+            
+
+                                        
+                    <Box sx={{ ml: 0 }}>
+
+                  
                             
-                            <Link to='/home' className='tituloNavBar'>
-                             <IconButton className="icon" color="secondary" >
-                                <HomeIcon className="icon" />
-                            </IconButton>
-                            </Link>
-
+                       
                         <Link to='/login' className='tituloNavBar'>
                             <IconButton className="icon" color="secondary" >
                                 <PersonIcon className="icon" />

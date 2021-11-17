@@ -43,11 +43,10 @@ function App() {
         <ToastContainer />
         <Router>
           <Switch>
-
-            <div>
+          <div style={{ minHeight: '100vh', maxWidth:'100vw'}}>
+           
               <Navbar />
           
-
               <Route exact path='/'>
                 <Home />
                 <Footer/>

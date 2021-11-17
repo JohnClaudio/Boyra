@@ -14,6 +14,12 @@
 }
 /* disable default outline on focused items */
 /* add custom outline on focused items */
+
+.jMNKZk {
+    width:100vw!important;
+    padding:0;
+    margin:0;
+}
 .rec-carousel-item:focus {
     outline: none;
     box-shadow: inset 0 0 1px 1px rgb(255, 253, 253);
@@ -26,7 +32,7 @@
     color:white;
 }
 .imagemCarrosel{
-     width:100%;
+     width:100vw;
      height: 400px;
 }
 .rec.rec-dot:hover{
@@ -38,11 +44,13 @@
     background-color: rgb(190, 194, 193);
     border-color: red;
     color:white;
+    padding: 15px;
 }
 .rec.rec-dot:checked{
     background-color: aquamarine;
     color:white;
     border-color: red;
+    
 }
 .rec.rec-dot:focus{
     background-color: aquamarine;
@@ -53,4 +61,22 @@
     background-color: rgb(190, 194, 193);
     border-color: red;
     color:white;
+
+}
+.rec.rec-dot:active{
+    background-color: rgb(190, 194, 193)!important;
+    border-color: rgb(255, 255, 255)!important;
+    color:white!important;
+  
+}
+
+.eaptOe{
+    box-shadow:0 0 1px 2px rgb(255 255 255)!important;
+    padding: 25px;
+}
+
+.lcUbOd{
+    padding: 25px;
+    box-shadow: 0 0 1px 3px rgb(101 177 194 / 50%) !important;
+
 }
