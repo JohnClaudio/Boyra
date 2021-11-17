@@ -5,7 +5,7 @@ import { useHistory, useParams } from 'react-router-dom';
 import Categoria from '../../models/Categoria';
 import useLocalStorage from 'react-use-localstorage';
 import Produto from '../../models/Produto';
-import { busca, buscaId, post} from '../../services/Service'
+import { busca, buscaCategoria, buscaId, post, put} from '../../services/Service'
 import { toast } from 'react-toastify';
 
 function CadastroProduto() {
@@ -69,19 +69,19 @@ function CadastroProduto() {
     }, [id])
 
     async function getCategorias() {
-        await busca("/categoria", setCategorias, /*{
+        await buscaCategoria("/categoria", setCategorias, {
             headers: {
                 'Authorization': token
             }
-        }*/)
+        })
     }
 
     async function findByIdProduto(id: string) {
-        await buscaId(`produtos/${id}`, setProduto, /*{
+        await buscaId(`produtos/${id}`, setProduto, {
             headers: {
                 'Authorization': token
             }
-        }*/)
+        })
     }
 
     function updatedProduto(e: ChangeEvent<HTMLInputElement>) {
@@ -96,8 +96,24 @@ function CadastroProduto() {
 
     async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
         e.preventDefault()
-
         
+        if (id !== undefined) {
+            put(`/produtos`, produto, setProduto, {
+                headers: {
+                    'Authorization': token
+                }
+            })
+            toast.success('Produto atualizado com sucesso', {
+                position: "top-right",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: false,
+                theme: "colored",
+                progress: undefined,
+            });
+        } else {
             post(`/produtos`, produto, setProduto, {
                 headers: {
                     'Authorization': token
@@ -114,15 +130,19 @@ function CadastroProduto() {
                 progress: undefined,
             });
         }
-        console.log(produto)
+
+        /*console.log(produto)
         console.log(token)
 
-      /*  back()
+    }*/
 
+    back()
+    
+    }
 
     function back() {
-        history.push('/produtos')
-    }*/
+        history.push('/listaproduto')
+    }
 
     return (
         <Container maxWidth="sm" className="topo">
@@ -135,6 +155,23 @@ function CadastroProduto() {
 
 
             <FormControl >
+
+            <InputLabel id="demo-simple-select-helper-label"> Categoria </InputLabel>
+                    <Select
+                        labelId="demo-simple-select-helper-label"
+                        id="demo-simple-select-helper"
+                        onChange={(e) => buscaId(`/categoria/${e.target.value}`, setCategoria, {
+                            headers: {
+                                'Authorization': token
+                            }
+                        })}>
+                        {
+                            categorias.map(categoria => (
+                                <MenuItem value={categoria.id}>{categoria.nome}</MenuItem>
+                            ))
+                        }
+                    </Select>
+                   
                 
                 <FormHelperText>Escolha uma categoria para o produto</FormHelperText>
                 <Button type="submit" variant="contained" color="primary">
@@ -146,4 +183,5 @@ function CadastroProduto() {
     )
 }
 
-export default CadastroProduto
+
+export default CadastroProduto;

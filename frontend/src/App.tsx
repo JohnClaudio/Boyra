@@ -21,6 +21,8 @@ import CadastroProduto from './pages/cadastroProduto/CadastroProduto';
 import CadastroCategoria from './pages/cadastroCategoria/CadastroCategoria';
 import Produtos from './pages/produtos/Produtos';
 import ListaCategoria  from './pages/listaCategoria/ListaCategoria';
+import ListaProduto from './pages/listaProduto/ListaProduto';
+import DeletarProduto from './pages/deletarProduto/DeletarProduto';
 
 const theme = createTheme({
   palette: {
@@ -84,7 +86,22 @@ function App() {
                 <Footer/>
               </Route>
 
+              <Route exact path='/listaproduto'>
+                <ListaProduto />
+                <Footer/>
+              </Route>
 
+              <Route exact path='/formularioProduto'>
+            <CadastroProduto />
+          </Route>
+
+          <Route exact path='/formularioProduto/:id'>
+            <CadastroProduto />
+          </Route>
+
+          <Route path='/deletarProduto/:id'>
+            <DeletarProduto />
+          </Route>
 
               <Route exact path='/contato'>
                 <Contato />

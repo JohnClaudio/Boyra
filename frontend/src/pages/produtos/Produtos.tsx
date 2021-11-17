@@ -38,7 +38,7 @@ const Produtos = () => {
 
                                 <Box className="card">
                                     <img className="cardImagem" src={produto.imagemUrl} alt="" />
-                                    <p className="description">{produto.descricao}</p>
+                                    <p className="description">{produto.nome}</p>
                                     <label className="price">{produto.preco}</label>
                                 </Box>
 
