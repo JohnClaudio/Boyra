@@ -6,17 +6,24 @@ import { toast } from 'react-toastify';
 import useLocalStorage from 'react-use-localstorage';
 import { buscaId, deleteId } from '../../services/Service';
 import Produto from '../../models/Produto';
+import { useSelector } from 'react-redux';
+import { TokenState } from '../../store/tokens/tokensReducer';
+
+
 
 
 function DeletarProduto() {
   let history = useHistory();
   const { id } = useParams<{ id: string }>();
   const [produtos, setProdutos] = useState<Produto[]>([]) 
-  const [token, setToken] = useLocalStorage('token');
+  const token = useSelector<TokenState, TokenState["tokens"]>(
+    (state) => state.tokens
+  );
+  
 
   useEffect(() => {
       if (token == "") {
-        toast.error('VocÃª precisa estar logado', {
+        toast.error('Voce precisa estar logado', {
           position: "top-right",
           autoClose: 2000,
           hideProgressBar: false,

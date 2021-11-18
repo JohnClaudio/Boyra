@@ -24,14 +24,32 @@
      border-radius: 30px;
    
  }
- 
+ .MuiGrid-item {
+    margin: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    justify-items: center;
+}
  .secondaryItem{
  
   
  }
+
+ .principalProduto{
+     background-image: url('https://www.revistacircuito.com/wp-content/uploads/2021/01/iStock-664619574-984x660-1.jpg');
+     background-size: 100%;
+    background-position: center;
+    background-attachment: scroll;
+   background-repeat: no-repeat;
+    }
  .flexcard{
      display: flex;
      flex-wrap: wrap;
+     justify-content: center;
+     align-items: center;
  }
  .card{
      height: 300px;

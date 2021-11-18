@@ -1,6 +1,9 @@
 .flexcard{
     display: flex;
     flex-wrap: wrap;
+    margin-bottom: 10%!important;
+    position: inherit;
+    bottom:0 ;
 }
 .card{
     height: 300px;

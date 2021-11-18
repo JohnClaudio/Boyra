@@ -7,9 +7,16 @@ import UserLogin from '../../models/UserLogin';
 import './Login.css';
 import { toast } from 'react-toastify';
 
+import { useDispatch } from 'react-redux';
+import { addToken } from "../../store/tokens/actions";
+import { useSelector } from 'react-redux';
+import { TokenState } from '../../store/tokens/tokensReducer';
 function Login() {
+    
     let history = useHistory();
-    const [token, setToken] = useLocalStorage('token');
+    const dispatch = useDispatch();
+    const [token, setToken] = useState('');
+    
     const [userLogin, setUserLogin] = useState<UserLogin>(
         {
             id: 0,
@@ -19,6 +26,25 @@ function Login() {
         }
         )
 
+        const fazsol = useSelector<TokenState, TokenState["tokens"]>(
+            (state) => state.tokens
+          );
+
+        
+        useEffect(()=>{
+            if(token != ''){
+                console.log('entrouaqui')
+                console.log(token)
+                dispatch(addToken(token));
+                console.log(  dispatch(addToken(token)))
+                history.push('/home')
+
+                console.log(fazsol)
+            }
+        }, [token])
+
+        
+
         function updatedModel(e: ChangeEvent<HTMLInputElement>) {
 
             setUserLogin({
@@ -27,17 +53,12 @@ function Login() {
             })
         }
 
-            useEffect(()=>{
-                if(token != ''){
-                    history.push('/home')
-                }
-            }, [token])
 
+        
         async function onSubmit(e: ChangeEvent<HTMLFormElement>){
             e.preventDefault();
-            try{
-                await login(`/usuarios/logar`, userLogin, setToken)
-
+            try{              
+                await login(`/usuarios/logar`, userLogin, setToken)           
                 toast.success('Usuário logado com sucesso!', {
                     position: "top-right",
                     autoClose: 2000,
@@ -48,6 +69,7 @@ function Login() {
                     theme: "colored",
                     progress: undefined,
                 });
+                console.log(userLogin)
             }catch(error){
                 toast.error('Dados do usuário inconsistentes. Erro ao logar!!', {
                     position: "top-right",
@@ -78,6 +100,8 @@ function Login() {
                  
                         <TextField className='inputLogin' value={userLogin.senha} onChange={(e:ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='senha' label='senha' variant='outlined' name='senha' margin='normal' type='password'fullWidth/>
                        
+                        <TextField className='inputLogin' value={userLogin.token} onChange={(e:ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='token' label='digite seu email' variant='outlined' name='token' margin='normal' fullWidth  />
+                        
                         <Box marginTop={2} textAlign='center'>
                                 <Button type='submit' variant='contained' color='primary'>
                                     Logar

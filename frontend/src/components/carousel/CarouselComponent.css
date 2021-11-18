@@ -16,9 +16,12 @@
 /* add custom outline on focused items */
 
 .jMNKZk {
-    width:100vw!important;
+    width:99vw!important;
     padding:0;
     margin:0;
+}
+.jMNKZk img{
+    min-width: 800px;
 }
 .rec-carousel-item:focus {
     outline: none;
@@ -32,7 +35,7 @@
     color:white;
 }
 .imagemCarrosel{
-     width:100vw;
+     width:99vw;
      height: 400px;
 }
 .rec.rec-dot:hover{

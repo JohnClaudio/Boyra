@@ -25,6 +25,9 @@ import ListaProduto from './pages/listaProduto/ListaProduto';
 import DeletarProduto from './pages/deletarProduto/DeletarProduto';
 import DeleteCategoria from './pages/deleteCategoria/DeleteCategoria';
 
+import {Provider} from 'react-redux';
+import store from './store/store';
+
 const theme = createTheme({
   palette: {
     primary: {
@@ -42,10 +45,12 @@ const theme = createTheme({
 function App() {
   return (
     <>
+      <Provider store={store}>
       <ThemeProvider theme={theme}>
         <ToastContainer />
         <Router>
           <Switch>
+    
           <div style={{ minHeight: '100vh', maxWidth:'100vw'}}>
               <Navbar />
           
@@ -122,11 +127,13 @@ function App() {
 
 
             </div>
-
+         
           </Switch>
 
         </Router>
+        
       </ThemeProvider>
+      </Provider>
     </>
   );
 }

@@ -1,5 +1,5 @@
 import React, { useState, useEffect, ChangeEvent } from 'react';
-import {Grid,  AppBar, Toolbar, Typography, Box, TextField, IconButton, Menu } from '@material-ui/core';
+import {Grid,  AppBar, Toolbar, Typography, Box, TextField, IconButton } from '@material-ui/core';
 import { Link, useHistory } from 'react-router-dom';
 import useLocalStorage from 'react-use-localstorage';
 import './Navbar.css'
@@ -14,18 +14,32 @@ import LogoutIcon from '@mui/icons-material/Logout';
 import HomeIcon from '@mui/icons-material/Home';
 import {toast} from 'react-toastify'
 
+import { useSelector } from 'react-redux';
+import { TokenState } from '../../../store/tokens/tokensReducer';
+import { useDispatch } from "react-redux";
+import { addToken } from '../../../store/tokens/actions';
+
+
+import Button from '@mui/material/Button';
+import Menu from '@mui/material/Menu';
+import MenuItem from '@mui/material/MenuItem';
+
 
 
 
 function Navbar() {
 
-    const [token, setToken] = useLocalStorage('token');
-    let history = useHistory();
+    const token = useSelector<TokenState, TokenState["tokens"]>(
+        (state) => state.tokens
+      );
 
-    function Lougout() {
-        setToken('');
-        history.push('/Login');
-        toast.info('Você deslogou', {
+    
+    let history = useHistory();
+    const dispatch = useDispatch();
+    
+    function Lougout(){
+        dispatch(addToken(''));
+        toast.info('Usuário deslogado', {
             position: "top-right",
             autoClose: 2000,
             hideProgressBar: false,
@@ -35,9 +49,18 @@ function Navbar() {
             theme: "colored",
             progress: undefined,
         });
+        history.push('/login')
     }
-   
-    const statusLogado = token ? true : false ;
+
+    const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
+    const open = Boolean(anchorEl);
+    const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+        setAnchorEl(event.currentTarget);
+    };
+    const handleClose = () => {
+        setAnchorEl(null);
+    };
+
     return (
 
     <Grid container>
@@ -68,7 +91,7 @@ function Navbar() {
                                 </Link>
                             </ul>
 
-</Box>
+                    </Box>
 
                         </Box>
                         
@@ -105,11 +128,38 @@ function Navbar() {
           
                         </Box>
                         
-                               
-                  
-         
 
+                        <Button
+                        id="basic-button"
+                        aria-controls="basic-menu"
+                        aria-haspopup="true"
+                        aria-expanded={open ? 'true' : undefined}
+                        onClick={handleClick}
+                        variant="contained"
+                    >
+                        Dashboard
+                    </Button>
+      <Menu
+        id="basic-menu"
+        anchorEl={anchorEl}
+        open={open}
+        onClose={handleClose}
+        MenuListProps={{
+          'aria-labelledby': 'basic-button',
+        }}
+      >
+        <Link to="/listaproduto">
+        <MenuItem onClick={handleClose}>Produtos</MenuItem>
+        </Link>  
+        <Link to="/listacategoria">
+        <MenuItem onClick={handleClose}>Categorias</MenuItem>
+        </Link>  
+        <Link to="/logout">
+        <MenuItem onClick={handleClose}>logout</MenuItem>
+        </Link>  
 
+  
+      </Menu>
 
 
 

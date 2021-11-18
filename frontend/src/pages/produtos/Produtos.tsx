@@ -7,6 +7,10 @@ import { busca } from '../../services/Service';
 import './Produtos.css'
 
 
+import CarouselComponent from '../../components/carousel/CarouselComponent';
+
+
+
 
 const Produtos = () => {
     const [produtos, setProdutos] = useState<Produto[]>([])
@@ -28,7 +32,7 @@ const Produtos = () => {
 
     return (
         <>
-              
+              <CarouselComponent />
             <Grid container direction="row" justifyContent='center' alignItems='center'  >
                 <Grid item xs={8}  >
                     <Box display="flex" className="flexcard" sx={{ mt: 5 }}>

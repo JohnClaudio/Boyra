@@ -7,13 +7,19 @@ import { Button, Grid, TextField, Typography, Box } from '@material-ui/core';
 import { cadastroCategoria, put, post} from '../../services/Service';
 import { toast } from 'react-toastify';
 
+import { useSelector } from 'react-redux';
+import { TokenState } from '../../store/tokens/tokensReducer';
+
 
 function CadastroCategoria() {
 
     let history = useHistory();
     const { id } = useParams<{ id: string }>();
     const [categorias, setCategorias] = useState<Categoria[]>([]) 
-    const [token, setToken] = useLocalStorage('token');
+    const token = useSelector<TokenState, TokenState["tokens"]>(
+        (state) => state.tokens
+      );
+      
     
 
     useEffect(() => {

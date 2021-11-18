@@ -9,15 +9,21 @@ import { buscaId, deletarId  } from '../../services/Service';
 import Categoria from '../../models/Categoria';
 
 
+import { useSelector } from 'react-redux';
+import { TokenState } from '../../store/tokens/tokensReducer';
 
+
+
+  
 
 function DeleteCategoria() {
 
     let history = useHistory();
     const { id } = useParams<{ id: string }>();
     const [categorias, setCategorias] = useState<Categoria[]>([]) 
-    const [token, setToken] = useLocalStorage('token');
-    
+    const token = useSelector<TokenState, TokenState["tokens"]>(
+        (state) => state.tokens
+      );
 
     useEffect(() => {
         if (token == "") {
@@ -110,10 +116,3 @@ function DeleteCategoria() {
     );
     }
 export default DeleteCategoria;
-
-function useSelector<T, U>(arg0: (state: any) => any) {
-    throw new Error('Function not implemented.');
-}
-function deleteId(arg0: string, arg1: { headers: { Authorization: void; }; }) {
-    throw new Error('Function not implemented.');
-}
