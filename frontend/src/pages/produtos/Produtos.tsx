@@ -6,6 +6,9 @@ import Produto from '../../models/Produto';
 import { busca } from '../../services/Service';
 import './Produtos.css'
 
+import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
+
+import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
 
 import CarouselComponent from '../../components/carousel/CarouselComponent';
 
@@ -43,8 +46,14 @@ const Produtos = () => {
                                 <Box className="card">
                                     <img className="cardImagem" src={produto.imagemUrl} alt="" />
                                     <p className="description">{produto.nome}</p>
-                                    <label className="price">{produto.preco}</label>
+                                    <label className="price">R$: {produto.preco}</label><br/>
+                                    <Box sx={{pt:2}} >
+                                    <Button className="btn" variant="outlined" startIcon={<ShoppingBasketIcon />}> Comprar </Button>                        
+                                    <Button className="btn" variant="outlined" startIcon={<ShoppingCartIcon />}> Carrinho </Button>
                                 </Box>
+                                </Box>
+
+                                
 
                             ))
                         }

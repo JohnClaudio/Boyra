@@ -11,6 +11,10 @@ function Produto(prop: { nome: string, title: string, height: string, width: str
                 <label className="price">R$: 50 PROMOÇÃO!</label>
             </div>
 
+            <Button variant="contained" color="primary">
+            Comprar
+            </Button>
+
         </Box>
     )
 }

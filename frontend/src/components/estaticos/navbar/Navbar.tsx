@@ -19,11 +19,9 @@ import { TokenState } from '../../../store/tokens/tokensReducer';
 import { useDispatch } from "react-redux";
 import { addToken } from '../../../store/tokens/actions';
 
-
 import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
-
 
 
 
@@ -61,6 +59,47 @@ function Navbar() {
         setAnchorEl(null);
     };
 
+
+    let funcaoAdmin
+    if (token != "") {
+        funcaoAdmin=
+        <div>
+            <Button
+                        id="basic-button"
+                        aria-controls="basic-menu"
+                        aria-haspopup="true"
+                        aria-expanded={open ? 'true' : undefined}
+                        onClick={handleClick}
+                        variant="contained"
+                    >
+                        Dashboard
+                    </Button>
+                    <Menu
+                        id="basic-menu"
+                        anchorEl={anchorEl}
+                        open={open}
+                        onClose={handleClose}
+                        MenuListProps={{
+                        'aria-labelledby': 'basic-button',
+                        }}
+                    >
+                        <Link to="/listaproduto">
+                        <MenuItem onClick={handleClose}>Produtos</MenuItem>
+                        </Link>  
+                        <Link to="/listacategoria">
+                        <MenuItem onClick={handleClose}>Categorias</MenuItem>
+                        </Link>  
+                        <Link to="/logout">
+                        <MenuItem onClick={handleClose}>logout</MenuItem>
+                        </Link>  
+
+                
+                    </Menu>
+        </div>
+        
+    }
+    
+
     return (
 
     <Grid container>
@@ -70,9 +109,7 @@ function Navbar() {
             <Box sx={{ display: 'flex', justifyContent: 'center', pt:1  }}>
 
                 <Toolbar variant="dense" >
-                       
-           
-           
+
                 <Box  sx={{ display: 'flex', justifyContent: 'end', flexGrow: 0 }}>
                 <img className="" src="./images/LOGO.png" alt="" />
                     <form>
@@ -129,38 +166,7 @@ function Navbar() {
                         </Box>
                         
 
-                        <Button
-                        id="basic-button"
-                        aria-controls="basic-menu"
-                        aria-haspopup="true"
-                        aria-expanded={open ? 'true' : undefined}
-                        onClick={handleClick}
-                        variant="contained"
-                    >
-                        Dashboard
-                    </Button>
-      <Menu
-        id="basic-menu"
-        anchorEl={anchorEl}
-        open={open}
-        onClose={handleClose}
-        MenuListProps={{
-          'aria-labelledby': 'basic-button',
-        }}
-      >
-        <Link to="/listaproduto">
-        <MenuItem onClick={handleClose}>Produtos</MenuItem>
-        </Link>  
-        <Link to="/listacategoria">
-        <MenuItem onClick={handleClose}>Categorias</MenuItem>
-        </Link>  
-        <Link to="/logout">
-        <MenuItem onClick={handleClose}>logout</MenuItem>
-        </Link>  
-
-  
-      </Menu>
-
+                    {funcaoAdmin}
 
 
                 </Toolbar>

@@ -4,9 +4,9 @@ import './Home.css';
 import ProdutoDestaque from '../../components/estaticos/produtoDestaque/ProdutoDestaque';
 import CarouselComponent from '../../components/carousel/CarouselComponent';
 
+import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 
-
-
+import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
 const Home = () => {
 
     const tamanhoProduto = { altura: '300px', largura: '300px' }
@@ -68,96 +68,24 @@ const Home = () => {
 
                         <Box display="flex" className="flexcard" sx={{ mt: 5 }}>
 
-                            <Box className="card">
+                            <Box className="card_promo" display="flex" flexDirection="column">
                                 <img src="https://cdn.shopify.com/s/files/1/0048/9508/0519/products/triofacial_540x.jpg?v=1619023593" alt="" />
-                                <p className="description">lorem lorem lorem lorem</p>
+                                <p className="description_promocao">lorem lorem lorem lorem</p>
                                 <div>
-                                    <label className="price_old">R$: 158,00 </label>
-                                    <label className="price">R$: 50 PROMOÇÃO!</label>
-                                </div>
+                               
+                                <label className="price_old_promo">R$: 158,00 </label>
+                                <label className="price_promo">R$: 49,99  PROMOÇÃO!</label>
+                                <br/>
+                               <Box sx={{pt:2}} >
+                                    <Button className="btn" variant="outlined" startIcon={<ShoppingBasketIcon />}> Comprar </Button>                        
+                                    <Button className="btn" variant="outlined" startIcon={<ShoppingCartIcon />}> Carrinho </Button>
+                                </Box>
+                            </div>
+                    
                             </Box>
+                          
 
-                            <Box className="card">
-                                <img src="https://cdn.shopify.com/s/files/1/0048/9508/0519/products/triofacial_540x.jpg?v=1619023593" alt="" />
-                                <p className="description">lorem lorem lorem lorem</p>
-                                <div>
-                                    <label className="price_old">R$: 158,00 </label>
-                                    <label className="price">R$: 50 PROMOÇÃO!</label>
-                                </div>
-                            </Box>
-
-                            <Box className="card">
-                                <img src="https://cdn.shopify.com/s/files/1/0048/9508/0519/products/triofacial_540x.jpg?v=1619023593" alt="" />
-                                <p className="description">lorem lorem lorem lorem</p>
-                                <div>
-                                    <label className="price_old">R$: 158,00 </label>
-                                    <label className="price">R$: 50 PROMOÇÃO!</label>
-                                </div>
-                            </Box>
-
-                            <Box className="card">
-                                <img src="https://cdn.shopify.com/s/files/1/0048/9508/0519/products/triofacial_540x.jpg?v=1619023593" alt="" />
-                                <p className="description">lorem lorem lorem lorem</p>
-                                <div>
-                                    <label className="price_old">R$: 158,00 </label>
-                                    <label className="price">R$: 50 PROMOÇÃO!</label>
-                                </div>
-                            </Box>
-
-                            <Box className="card">
-                                <img src="https://cdn.shopify.com/s/files/1/0048/9508/0519/products/triofacial_540x.jpg?v=1619023593" alt="" />
-                                <p className="description">lorem lorem lorem lorem</p>
-                                <div>
-                                    <label className="price_old">R$: 158,00 </label>
-                                    <label className="price">R$: 50 PROMOÇÃO!</label>
-                                </div>
-                            </Box>
-
-                            <Box className="card">
-                                <img src="https://cdn.shopify.com/s/files/1/0048/9508/0519/products/triofacial_540x.jpg?v=1619023593" alt="" />
-                                <p className="description">lorem lorem lorem lorem</p>
-                                <div>
-                                    <label className="price_old">R$: 158,00 </label>
-                                    <label className="price">R$: 50 PROMOÇÃO!</label>
-                                </div>
-                            </Box>
-
-
-                            <Box className="card">
-                                <img src="https://cdn.shopify.com/s/files/1/0048/9508/0519/products/triofacial_540x.jpg?v=1619023593" alt="" />
-                                <p className="description">lorem lorem lorem lorem</p>
-                                <div>
-                                    <label className="price_old">R$: 158,00 </label>
-                                    <label className="price">R$: 50 PROMOÇÃO!</label>
-                                </div>
-                            </Box>
-
-                            <Box className="card">
-                                <img src="https://cdn.shopify.com/s/files/1/0048/9508/0519/products/triofacial_540x.jpg?v=1619023593" alt="" />
-                                <p className="description">lorem lorem lorem lorem</p>
-                                <div>
-                                    <label className="price_old">R$: 158,00 </label>
-                                    <label className="price">R$: 50 PROMOÇÃO!</label>
-                                </div>
-                            </Box>
-
-                            <Box className="card">
-                                <img src="https://cdn.shopify.com/s/files/1/0048/9508/0519/products/triofacial_540x.jpg?v=1619023593" alt="" />
-                                <p className="description">lorem lorem lorem lorem</p>
-                                <div>
-                                    <label className="price_old">R$: 158,00 </label>
-                                    <label className="price">R$: 50 PROMOÇÃO!</label>
-                                </div>
-                            </Box>
-
-                            <Box className="card">
-                                <img src="https://cdn.shopify.com/s/files/1/0048/9508/0519/products/triofacial_540x.jpg?v=1619023593" alt="" />
-                                <p className="description">lorem lorem lorem lorem</p>
-                                <div>
-                                    <label className="price_old">R$: 158,00 </label>
-                                    <label className="price">R$: 50 PROMOÇÃO!</label>
-                                </div>
-                            </Box>
+                      
 
                         </Box>
 
