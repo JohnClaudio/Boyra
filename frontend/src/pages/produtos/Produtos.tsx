@@ -50,7 +50,7 @@ const Produtos = () => {
                                     <Box sx={{pt:2}} >
                                     <Button className="btn" variant="outlined" startIcon={<ShoppingBasketIcon />}> Comprar </Button>                        
                                     <Button className="btn" variant="outlined" startIcon={<ShoppingCartIcon />}> Carrinho </Button>
-                                </Box>
+                                    </Box>
                                 </Box>
 
                                 

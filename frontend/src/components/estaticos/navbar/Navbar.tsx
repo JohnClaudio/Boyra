@@ -83,11 +83,17 @@ function Navbar() {
                         'aria-labelledby': 'basic-button',
                         }}
                     >
-                        <Link to="/listaproduto">
-                        <MenuItem onClick={handleClose}>Produtos</MenuItem>
+                         <Link to="/cadastroProduto">
+                        <MenuItem onClick={handleClose}>Cadastrar Produto</MenuItem>
                         </Link>  
+                        <Link to="/listaproduto">
+                        <MenuItem onClick={handleClose}>Lista Produtos</MenuItem>
+                        </Link>
+                        <Link to="/cadastroCategoria">
+                        <MenuItem onClick={handleClose}>Cadastrar Categoria</MenuItem>
+                        </Link>    
                         <Link to="/listacategoria">
-                        <MenuItem onClick={handleClose}>Categorias</MenuItem>
+                        <MenuItem onClick={handleClose}>Lista Categorias</MenuItem>
                         </Link>  
                         <Link to="/logout">
                         <MenuItem onClick={handleClose}>logout</MenuItem>

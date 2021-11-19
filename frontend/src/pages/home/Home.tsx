@@ -80,8 +80,7 @@ const Home = () => {
                                     <Button className="btn" variant="outlined" startIcon={<ShoppingBasketIcon />}> Comprar </Button>                        
                                     <Button className="btn" variant="outlined" startIcon={<ShoppingCartIcon />}> Carrinho </Button>
                                 </Box>
-                            </div>
-                    
+                                </div>                  
                             </Box>
                           
 
