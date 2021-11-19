@@ -45,8 +45,12 @@ const Produtos = () => {
 
                                 <Box className="card">
                                     <img className="cardImagem" src={produto.imagemUrl} alt="" />
+                                
+                               
+                                    <Box display="flex">
                                     <p className="description">{produto.nome}</p>
-                                    <label className="price">R$: {produto.preco}</label><br/>
+                                    <label className="price">R$: {produto.preco}</label>
+                                    </Box>
                                     <Box sx={{pt:2}} >
                                     <Button className="btn" variant="outlined" startIcon={<ShoppingBasketIcon />}> Comprar </Button>                        
                                     <Button className="btn" variant="outlined" startIcon={<ShoppingCartIcon />}> Carrinho </Button>

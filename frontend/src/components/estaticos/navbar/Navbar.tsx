@@ -64,13 +64,21 @@ function Navbar() {
     if (token != "") {
         funcaoAdmin =
             <div>
+                         <Link to="/login">
+                                    <IconButton onClick={Lougout} className="icon" color="secondary" >
+                                        <LogoutIcon className="icon" />
+                                    </IconButton>
+                                </Link>
+                                
                 <Button
+                className="btnColor"
                     id="basic-button"
                     aria-controls="basic-menu"
                     aria-haspopup="true"
                     aria-expanded={open ? 'true' : undefined}
                     onClick={handleClick}
                     variant="contained"
+                    color="primary"
                 >
                     Menu
                 </Button>
@@ -83,20 +91,20 @@ function Navbar() {
                         'aria-labelledby': 'basic-button',
                     }}
                 >
-                    <Link to="/cadastroProduto">
+                    <Link to="/cadastroProduto" className='tituloNavBar2' >
                         <MenuItem onClick={handleClose}>Cadastrar Produto</MenuItem>
                     </Link>
-                    <Link to="/listaproduto">
-                        <MenuItem onClick={handleClose}>Lista Produtos</MenuItem>
+                    <Link to="/listaproduto"className='tituloNavBar2'>
+                        <MenuItem  onClick={handleClose}>Lista Produtos</MenuItem>
                     </Link>
-                    <Link to="/cadastroCategoria">
-                        <MenuItem onClick={handleClose}>Cadastrar Categoria</MenuItem>
+                    <Link to="/cadastroCategoria" className='tituloNavBar2'>
+                        <MenuItem  onClick={handleClose}>Cadastrar Categoria</MenuItem>
                     </Link>
-                    <Link to="/listacategoria">
-                        <MenuItem onClick={handleClose}>Lista Categorias</MenuItem>
+                    <Link to="/listacategoria" className='tituloNavBar2'>
+                        <MenuItem  onClick={handleClose}>Lista Categorias</MenuItem>
                     </Link>
-                    <Link to="/logout">
-                        <MenuItem onClick={handleClose}>logout</MenuItem>
+                    <Link to="/logout" className='tituloNavBar2'>
+                        <MenuItem  onClick={handleClose}>logout</MenuItem>
                     </Link>
 
 
@@ -162,16 +170,12 @@ function Navbar() {
                                     </IconButton>
                                 </Link>
 
+
                                 <IconButton color="secondary" aria-label="upload picture" component="span">
                                     <ShoppingCartIcon className="icon" />
                                 </IconButton>
 
-                                <Link to="/login">
-                                    <IconButton onClick={Lougout} className="icon" color="secondary" >
-                                        <LogoutIcon className="icon" />
-                                    </IconButton>
-                                </Link>
-
+                        
                             </Box>
 
 

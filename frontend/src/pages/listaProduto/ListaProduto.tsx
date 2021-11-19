@@ -57,6 +57,8 @@ const ListaProduto = () => {
     <>
       {
         produtos.map(produto => (
+
+          
           <Box m={2} >
             <Card variant="outlined">
               <CardContent>
@@ -69,9 +71,7 @@ const ListaProduto = () => {
                 <Typography variant="body2" component="p">
                   {produto.descricao}
                 </Typography>
-                <Typography variant="body2" component="p">
-                  {produto.imagemUrl}
-                </Typography>
+      
                 <Typography variant="body2" component="p">
                   {produto.preco}
                 </Typography>

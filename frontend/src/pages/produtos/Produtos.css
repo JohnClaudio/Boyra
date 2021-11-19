@@ -7,7 +7,7 @@
 }
 .card{
     height: 300px;
-    padding:5px;
+    padding:5%;
     min-width: 190px; 
     margin-bottom: 5%;   
     } 
@@ -30,7 +30,17 @@
     overflow-wrap:break-word;
     overflow: visible;
     max-width: 200px;
+    margin:0;
     }
+    .categoria{
+        font-size: 1.2rem;
+        color: white;
+        overflow-wrap:break-word;
+        overflow: visible;
+        max-width: 200px;
+        margin-top: -30px;
+        
+        }
 
 .aux{
     background:#65B1C2;

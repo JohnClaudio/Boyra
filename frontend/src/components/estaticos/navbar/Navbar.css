@@ -4,6 +4,19 @@
     width:100vw;
 
 }
+.btnColor{
+    background-color: #65B1C2!important;
+    color:white
+}
+.tituloNavBar2 {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+  
+}
+
+.css-kk1bwy-MuiButtonBase-root-MuiMenuItem-root{
+    text-decoration: inherit;
+}
 .searchMenu{
     width:60vh;
     height: 60px;

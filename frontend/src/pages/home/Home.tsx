@@ -16,7 +16,7 @@ const Home = () => {
             <CarouselComponent />
             <Grid container direction="row" justifyContent='center' alignItems='center' >
 
-            <Grid item xs={12}>
+            <Grid item xs={12} justifyContent='center' alignItems='center' >
             
                     <Box className="" >
 
@@ -82,6 +82,113 @@ const Home = () => {
                                 </Box>
                                 </div>                  
                             </Box>
+
+                            <Box className="card_promo" display="flex" flexDirection="column">
+                                <img src="https://cdn.shopify.com/s/files/1/0048/9508/0519/products/castanhaeacafrao_540x.png?v=1634224377" alt="" />
+                                <p className="description_promocao">lorem lorem lorem lorem</p>
+                                <div>
+                               
+                                <label className="price_old_promo">R$: 158,00 </label>
+                                <label className="price_promo">R$: 49,99  PROMOÇÃO!</label>
+                                <br/>
+                               <Box sx={{pt:2}} >
+                                    <Button className="btn" variant="outlined" startIcon={<ShoppingBasketIcon />}> Comprar </Button>                        
+                                    <Button className="btn" variant="outlined" startIcon={<ShoppingCartIcon />}> Carrinho </Button>
+                                </Box>
+                                </div>                  
+                            </Box>
+
+                            <Box className="card_promo" display="flex" flexDirection="column">
+                                <img src="https://cdn.shopify.com/s/files/1/0048/9508/0519/products/5_2b1247be-c4fb-45c5-aa67-ba60db5ff6ca_540x.png?v=1633532199" alt="" />
+                                <p className="description_promocao">lorem lorem lorem lorem</p>
+                                <div>
+                               
+                                <label className="price_old_promo">R$: 158,00 </label>
+                                <label className="price_promo">R$: 49,99  PROMOÇÃO!</label>
+                                <br/>
+                               <Box sx={{pt:2}} >
+                                    <Button className="btn" variant="outlined" startIcon={<ShoppingBasketIcon />}> Comprar </Button>                        
+                                    <Button className="btn" variant="outlined" startIcon={<ShoppingCartIcon />}> Carrinho </Button>
+                                </Box>
+                                </div>                  
+                            </Box>
+
+                            <Box className="card_promo" display="flex" flexDirection="column">
+                                <img src="https://cdn.shopify.com/s/files/1/0048/9508/0519/products/trioabacate_2_540x.png?v=1625228181" alt="" />
+                                <p className="description_promocao">lorem lorem lorem lorem</p>
+                                <div>
+                               
+                                <label className="price_old_promo">R$: 158,00 </label>
+                                <label className="price_promo">R$: 49,99  PROMOÇÃO!</label>
+                                <br/>
+                               <Box sx={{pt:2}} >
+                                    <Button className="btn" variant="outlined" startIcon={<ShoppingBasketIcon />}> Comprar </Button>                        
+                                    <Button className="btn" variant="outlined" startIcon={<ShoppingCartIcon />}> Carrinho </Button>
+                                </Box>
+                                </div>                  
+                            </Box>
+
+                            <Box className="card_promo" display="flex" flexDirection="column">
+                                <img src="https://cdn.shopify.com/s/files/1/0048/9508/0519/products/trioabacate_540x.png?v=1625071363" alt="" />
+                                <p className="description_promocao">lorem lorem lorem lorem</p>
+                                <div>
+                               
+                                <label className="price_old_promo">R$: 158,00 </label>
+                                <label className="price_promo">R$: 49,99  PROMOÇÃO!</label>
+                                <br/>
+                               <Box sx={{pt:2}} >
+                                    <Button className="btn" variant="outlined" startIcon={<ShoppingBasketIcon />}> Comprar </Button>                        
+                                    <Button className="btn" variant="outlined" startIcon={<ShoppingCartIcon />}> Carrinho </Button>
+                                </Box>
+                                </div>                  
+                            </Box>
+
+                            <Box className="card_promo" display="flex" flexDirection="column">
+                                <img src="https://cdn.shopify.com/s/files/1/0048/9508/0519/products/CapturadeTela2020-09-02as12.03.27_540x_086f7a8f-fb33-4523-88c6-96ccce28b8af_540x.png?v=1630456228" alt="" />
+                                <p className="description_promocao">lorem lorem lorem lorem</p>
+                                <div>
+                               
+                                <label className="price_old_promo">R$: 158,00 </label>
+                                <label className="price_promo">R$: 49,99  PROMOÇÃO!</label>
+                                <br/>
+                               <Box sx={{pt:2}} >
+                                    <Button className="btn" variant="outlined" startIcon={<ShoppingBasketIcon />}> Comprar </Button>                        
+                                    <Button className="btn" variant="outlined" startIcon={<ShoppingCartIcon />}> Carrinho </Button>
+                                </Box>
+                                </div>                  
+                            </Box>
+
+                            <Box className="card_promo" display="flex" flexDirection="column">
+                                <img src="https://cdn.shopify.com/s/files/1/0048/9508/0519/products/sabaodecocoherbaiye_540x.jpg?v=1584549723" alt="" />
+                                <p className="description_promocao">lorem lorem lorem lorem</p>
+                                <div>
+                               
+                                <label className="price_old_promo">R$: 25,00 </label>
+                                <label className="price_promo">R$: 49,99  PROMOÇÃO!</label>
+                                <br/>
+                               <Box sx={{pt:2}} >
+                                    <Button className="btn" variant="outlined" startIcon={<ShoppingBasketIcon />}> Comprar </Button>                        
+                                    <Button className="btn" variant="outlined" startIcon={<ShoppingCartIcon />}> Carrinho </Button>
+                                </Box>
+                                </div>                  
+                            </Box>
+
+                            <Box className="card_promo" display="flex" flexDirection="column">
+                                <img src="https://cdn.shopify.com/s/files/1/0048/9508/0519/products/CapturadeTela2020-09-02as12.00.11_540x.png?v=1629722581" alt="" />
+                                <p className="description_promocao">lorem lorem lorem lorem</p>
+                                <div>
+                               
+                                <label className="price_old_promo">R$: 158,00 </label>
+                                <label className="price_promo">R$: 49,99  PROMOÇÃO!</label>
+                                <br/>
+                               <Box sx={{pt:2}} >
+                                    <Button className="btn" variant="outlined" startIcon={<ShoppingBasketIcon />}> Comprar </Button>                        
+                                    <Button className="btn" variant="outlined" startIcon={<ShoppingCartIcon />}> Carrinho </Button>
+                                </Box>
+                                </div>                  
+                            </Box>
+
+        
                           
 
                       
