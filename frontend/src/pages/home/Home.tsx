@@ -24,16 +24,16 @@ const Home = () => {
                     <Typography variant="h4" align="center" gutterBottom >Feitos pra você</Typography>
                     </Box>
 
-                <Box display="flex">
+                <Box display="flex" >
                         <ProdutoDestaque
-                            url="https://cdn.shopify.com/s/files/1/0048/9508/0519/products/triofacial_540x.jpg?v=1619023593"
+                            url="https://imgur.com/E6L6JnQ.png"
                             title="Cabelo"
                             height={tamanhoProduto.altura}
                             width={tamanhoProduto.largura}
                         />
 
                         <ProdutoDestaque
-                            url="https://cdn.shopify.com/s/files/1/0048/9508/0519/products/8_540x.png?v=1633532915"
+                            url="https://imgur.com/P9aSWXS.png"
                             title="Rosto"
                             height={tamanhoProduto.altura}
                             width={tamanhoProduto.largura}
@@ -41,15 +41,15 @@ const Home = () => {
 
                         <ProdutoDestaque
                             url="https://cdn.shopify.com/s/files/1/0048/9508/0519/products/salgrosso_540x.jpg?v=1623855129"
-                            title="Corpo"
+                            title="Vestuário"
                             height={tamanhoProduto.altura}
                             width={tamanhoProduto.largura}
                         />
 
 
                         <ProdutoDestaque
-                            url="https://cdn.shopify.com/s/files/1/0048/9508/0519/products/salgrosso_540x.jpg?v=1623855129"
-                            title="Corpo"
+                            url="https://imgur.com/09qhrt7.png"
+                            title="Higiene"
                             height={tamanhoProduto.altura}
                             width={tamanhoProduto.largura}
                         />

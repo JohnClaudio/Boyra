@@ -54,7 +54,7 @@ function Footer() {
                         <Grid alignItems="center" item xs={6}>
                             <Box sx={{ ml: 7, marginTop: 5 }} >
                                 <Box>
-                                    <Link to='/sobre'>
+                                    <Link to='/contato'>
                                         <Typography variant="subtitle2" style={{ color: "#000000" }} > Contato</Typography>
                                     </Link>
 
