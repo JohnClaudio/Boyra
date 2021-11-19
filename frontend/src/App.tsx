@@ -20,12 +20,13 @@ import CadastroUsuario from './pages/cadastroUsuario/CadastroUsuario';
 import CadastroProduto from './pages/cadastroProduto/CadastroProduto';
 import CadastroCategoria from './pages/cadastroCategoria/CadastroCategoria';
 import Produtos from './pages/produtos/Produtos';
-import ListaCategoria  from './pages/listaCategoria/ListaCategoria';
+import ListaCategoria from './pages/listaCategoria/ListaCategoria';
 import ListaProduto from './pages/listaProduto/ListaProduto';
 import DeletarProduto from './pages/deletarProduto/DeletarProduto';
 import DeleteCategoria from './pages/deleteCategoria/DeleteCategoria';
+import Sobre from './pages/sobre/Sobre';
 
-import {Provider} from 'react-redux';
+import { Provider } from 'react-redux';
 import store from './store/store';
 
 const theme = createTheme({
@@ -46,93 +47,99 @@ function App() {
   return (
     <>
       <Provider store={store}>
-      <ThemeProvider theme={theme}>
-        <ToastContainer />
-        <Router>
-          <Switch>
-    
-          <div style={{ minHeight: '100vh', maxWidth:'100vw'}}>
-              <Navbar />
-          
-              <Route exact path='/'>
-                <Home />
-                <Footer/>
-              </Route>
+        <ThemeProvider theme={theme}>
+          <ToastContainer />
+          <Router>
+            <Switch>
 
-              <Route path='/home'>
-                <Home />
-                <Footer/>
-              </Route>
+              <div style={{ minHeight: '100vh', maxWidth: '100vw' }}>
+                <Navbar />
 
+                <Route exact path='/'>
+                  <Home />
+                  <Footer />
+                </Route>
 
-              <Route path='/cadastroUsuario'>
-                <CadastroUsuario />              
-              </Route>
-
-              <Route path='/cadastroProduto'>
-                <CadastroProduto />              
-              </Route>
-
-              <Route path='/cadastroCategoria'>
-                <CadastroCategoria/>              
-              </Route>
-
-              <Route path='/listaCategoria'>
-                <ListaCategoria />              
-              </Route>
-
-              <Route path='/login'>
-                <Login />
-                <Footer/>
-              </Route>
-
-              <Route exact path='/produtos'>
-                <Produtos />
-                <Footer/>
-              </Route>
-
-              <Route exact path='/listaproduto'>
-                <ListaProduto />
-                <Footer/>
-              </Route>
-
-              <Route exact path='/formularioProduto'>
-            <CadastroProduto />
-          </Route>
-
-          <Route exact path='/formularioProduto/:id'>
-            <CadastroProduto />
-          </Route>
-
-          <Route exact path='/formularioCategoria'>
-            <CadastroCategoria/>
-          </Route>
-
-          <Route exact path='/formularioCategoria/:id'>
-            <CadastroCategoria />
-          </Route>
-
-          <Route path='/deletarProduto/:id'>
-            <DeletarProduto />
-          </Route>
-
-              <Route exact path='/contato'>
-                <Contato />
-                <Footer/>
-              </Route>
-
-              <Route exact path='/deletarCategoria/:id'>
-                <DeleteCategoria />
-              </Route>
+                <Route path='/home'>
+                  <Home />
+                  <Footer />
+                </Route>
 
 
-            </div>
-         
-          </Switch>
+                <Route path='/cadastroUsuario'>
+                  <CadastroUsuario />
+                </Route>
 
-        </Router>
-        
-      </ThemeProvider>
+                <Route path='/cadastroProduto'>
+                  <CadastroProduto />
+                </Route>
+
+                <Route path='/cadastroCategoria'>
+                  <CadastroCategoria />
+                </Route>
+
+                <Route path='/listaCategoria'>
+                  <ListaCategoria />
+                </Route>
+
+                <Route path='/login'>
+                  <Login />
+                  <Footer />
+                </Route>
+
+                <Route exact path='/produtos'>
+                  <Produtos />
+                  <Footer />
+                </Route>
+
+                <Route exact path='/listaproduto'>
+                  <ListaProduto />
+                  <Footer />
+                </Route>
+
+                <Route exact path='/formularioProduto'>
+                  <CadastroProduto />
+                </Route>
+
+                <Route exact path='/formularioProduto/:id'>
+                  <CadastroProduto />
+                </Route>
+
+                <Route exact path='/formularioCategoria'>
+                  <CadastroCategoria />
+                </Route>
+
+                <Route exact path='/formularioCategoria/:id'>
+                  <CadastroCategoria />
+                </Route>
+
+                <Route path='/deletarProduto/:id'>
+                  <DeletarProduto />
+                </Route>
+
+                <Route exact path='/contato'>
+                  <Contato />
+                  <Footer />
+                </Route>
+
+                <Route exact path='/deletarCategoria/:id'>
+                  <DeleteCategoria />
+                </Route>
+
+                <Route exact path='/sobre'>
+                  <Sobre />
+                  <Footer />
+                </Route>
+
+
+
+              </div>
+
+            </Switch>
+
+          </Router>
+
+        </ThemeProvider>
       </Provider>
     </>
   );

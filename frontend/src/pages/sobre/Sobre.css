@@ -1,0 +1,98 @@
+.img {
+    width: 80%;
+    display: block;
+    margin: 30px;
+    height: 50%;
+}
+
+.img2{
+    width: 80%;
+    display: block;
+    margin: auto;
+}
+
+.cards{
+    padding: 25px;
+    border-radius: 20px;
+}
+
+.font{
+    font-family: 'EB Garamond', sans-serif!important;
+    color: black;
+}
+
+.texto{
+    color: black!important;
+    font-family: 'EB Garamond', sans-serif!important;
+}
+
+.texto2{
+    color: black!important;
+    font-family: 'Roboto', sans-serif!important;
+    direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-top: 15px;
+    font-size: 17px!important;
+}
+
+.texto3{
+    color:  #65B1C2!important;
+    justify-content: center!important;
+}
+
+.backgound{
+    background-color: #ACF2EB;
+}
+
+.backgound-white{
+    background-color: white; 
+    justify-content: center;
+    padding:2%;
+}
+
+.alinhamento{
+    display: flex;
+    direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 40px;
+}
+
+.alinhamento2{
+    justify-content: center!important;
+}
+
+.border2{
+    border-radius: 30px;
+    width: 90%;
+    margin: auto;
+
+}
+
+.icons{
+    font-size: 30px!important;
+    color: #65B1C2;
+    padding: 5px;
+    justify-content: center;
+    
+
+}
+
+.icons1{
+    font-size: 35px!important;
+    color: #65B1C2;
+    padding: 5px;
+    
+}
+
+.sobrenos{
+    justify-content: center;
+    padding-top: 15px;
+}
+
+.MuiCardMedia-img{
+
+    width: 95px;
+    height: 520px;
+} 
