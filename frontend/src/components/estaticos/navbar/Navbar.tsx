@@ -133,7 +133,7 @@ function Navbar() {
                                                     <li>Produtos</li>
                                                 </Link>
                                                 <Link to='/sobre' className='tituloNavBar'>
-                                                    <li>Contatos</li>
+                                                    <li>Sobre nós</li>
                                                 </Link>
                                             </ul>
 
