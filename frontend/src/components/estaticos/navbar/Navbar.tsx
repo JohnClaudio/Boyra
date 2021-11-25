@@ -127,8 +127,8 @@ function Navbar() {
 
                         <Toolbar variant="dense" >
 
-                            <Box sx={{ display: 'flex', justifyContent: 'end', flexGrow: 0 }}>
-                                <img className="" src="./images/LOGO.png" alt="" />
+                            <Box sx={{ display: 'flex', justifyContent: 'end', flexGrow: 0,  }}>
+                                <img className="logoNavBar" src="https://imgur.com/z71qH4N.png" alt="" />
                                 <form>
                                     <Box className="searchMenu" >
                                         <input type="text" className='inputNavBar'></input>
@@ -150,18 +150,18 @@ function Navbar() {
                                     </Box>
 
                                 </form>
-                                <IconButton className="icon" color='secondary'>
-                                    <SearchIcon className="icon" />
-                                </IconButton>
+
 
 
                             </Box>
 
 
 
-                            <Box sx={{ ml: 0 }}>
+                            <Box sx={{ mr: 5, mb: 5, }}>
 
-
+                                    <IconButton className="icon" color='secondary'>
+                                         <SearchIcon className="icon" />
+                                     </IconButton>
 
 
                                 <Link to='/login' className='tituloNavBar'>
