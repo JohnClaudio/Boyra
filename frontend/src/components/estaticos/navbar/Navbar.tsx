@@ -104,7 +104,7 @@ function Navbar() {
                         <MenuItem  onClick={handleClose}>Lista Categorias</MenuItem>
                     </Link>
                     <Link to="/logout" className='tituloNavBar2'>
-                        <MenuItem  onClick={handleClose}>logout</MenuItem>
+                        <MenuItem  onClick={handleClose}>Logout</MenuItem>
                     </Link>
 
 
@@ -130,7 +130,7 @@ function Navbar() {
                             <Box sx={{ display: 'flex', justifyContent: 'end', flexGrow: 0 }}>
                                 <img className="" src="./images/LOGO.png" alt="" />
                                 <form>
-                                    <Box className="searchMenu">
+                                    <Box className="searchMenu" >
                                         <input type="text" className='inputNavBar'></input>
                                         <Box sx={{ display: 'flex', justifyContent: 'flex-end', }}>
                                             <ul className="menu_list">

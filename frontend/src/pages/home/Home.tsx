@@ -40,7 +40,7 @@ const Home = () => {
                         />
 
                         <ProdutoDestaque
-                            url="https://cdn.shopify.com/s/files/1/0048/9508/0519/products/salgrosso_540x.jpg?v=1623855129"
+                            url="https://imgur.com/QYzm4b4.png"
                             title="Vestuário"
                             height={tamanhoProduto.altura}
                             width={tamanhoProduto.largura}

@@ -6,9 +6,9 @@ import './CarouselComponent.css'
 
 function CarouselComponent() {
   const [items, setstate] = useState([
-    {id: 1, title: 'item #1', img:"https://i.imgur.com/92z1i09.png"},
-    {id: 2, title: 'item #2', img:"https://i.imgur.com/U7Up5Z3.png"},
-    {id: 3, title: 'item #3', img:"https://i.imgur.com/b4l0qDO.pngg"}
+    {id: 1, title: 'item #1', img:"https://imgur.com/pjf8oYe.png"},
+    {id: 2, title: 'item #2', img:"https://imgur.com/8gJYHyl.png"},
+    {id: 3, title: 'item #3', img:"https://imgur.com/vrwduUi.png"}
    
   ])
   return (
