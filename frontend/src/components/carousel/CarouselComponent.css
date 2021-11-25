@@ -1,0 +1,85 @@
+.rec.rec-arrow {
+    border-radius: 0;
+    background-color: #65B1C2;
+    color:white;
+}
+/* round buttons on hover */
+.rec.rec-arrow:hover {
+    border-radius: 50%;
+    background-color: #65B1C2;
+}
+/* hide disabled buttons */
+.rec.rec-arrow:disabled {
+    visibility: hidden;
+}
+/* disable default outline on focused items */
+/* add custom outline on focused items */
+
+.jMNKZk {
+    width:99vw!important;
+    padding:0;
+    margin:0;
+}
+.jMNKZk img{
+    min-width: 800px;
+}
+.rec-carousel-item:focus {
+    outline: none;
+    box-shadow: inset 0 0 1px 1px rgb(255, 253, 253);
+    background-color: #65B1C2;
+}
+
+.rec.rec-arrow :checked {
+    border-radius: 0;
+    background-color: #65B1C2;
+    color:white;
+}
+.imagemCarrosel{
+     width:99vw;
+     height: 400px;
+}
+.rec.rec-dot:hover{
+    background-color: aquamarine;
+    color:white;
+    border-color: red;
+}
+.rec.rec-dot{
+    background-color: rgb(190, 194, 193);
+    border-color: red;
+    color:white;
+    padding: 15px;
+}
+.rec.rec-dot:checked{
+    background-color: aquamarine;
+    color:white;
+    border-color: red;
+    
+}
+.rec.rec-dot:focus{
+    background-color: aquamarine;
+    color:white;
+    border-color: red;
+}
+.rec.rec-dot:enabled{
+    background-color: rgb(190, 194, 193);
+    border-color: red;
+    color:white;
+
+}
+.rec.rec-dot:active{
+    background-color: rgb(190, 194, 193)!important;
+    border-color: rgb(255, 255, 255)!important;
+    color:white!important;
+  
+}
+
+.eaptOe{
+    box-shadow:0 0 1px 2px rgb(255 255 255)!important;
+    padding: 25px;
+}
+
+.lcUbOd{
+    padding: 25px;
+    box-shadow: 0 0 1px 3px rgb(101 177 194 / 50%) !important;
+
+}

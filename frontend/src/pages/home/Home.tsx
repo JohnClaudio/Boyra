@@ -1,164 +1,218 @@
-import { Grid, Box, Typography, Button} from '@material-ui/core';
+import { Grid, Box, Typography, Button } from '@material-ui/core';
 import React from 'react';
 import './Home.css';
+import ProdutoDestaque from '../../components/estaticos/produtoDestaque/ProdutoDestaque';
+import CarouselComponent from '../../components/carousel/CarouselComponent';
 
+import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 
- const Home = () =>{
-return(
-  <>
-  <Box>
-    <Box className="homeImagem" >
+import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
+const Home = () => {
 
-        <Box className="tituloHome">
-        <Typography className="roboto" variant="h4">Qualidade e Sustentabilidade</Typography>
-        </Box>
+    const tamanhoProduto = { altura: '300px', largura: '300px' }
+    const tamanhoProduto2 = { altura: '500px', largura: '600px' }
+    return (
+        <>
+            <CarouselComponent />
+            <Grid container direction="row" justifyContent='center' alignItems='center' >
 
-    </Box>
- 
-<Box sx={{mt:5}}>
-<Typography variant="h3" align="center" gutterBottom >Destaques</Typography>
-</Box>
-  
-
-    <Grid container direction="row" justifyContent='flex-end' alignItems='flex-end'  >
-
-    <Grid item xs={6}  >
-
-    <Box  paddingX={50}   mt={12} sx={{pb:15}}>
-    <img className="principalItem" src="https://cdn.shopify.com/s/files/1/0048/9508/0519/products/WhatsAppImage2020-12-14at13.08.02_540x.jpg?v=1607962401" alt="" />
-    
-     </Box>
-
-    </Grid>
-
-
-    
-    <Grid item xs={6} spacing={2}  >
-
-    <Box display="flex" alignItems="center" justifyContent="center" sx={{ pb:10}}>
-
-
-        <Box paddingTop={1} paddingRight={20}  display="flex"  sx={{ justifyContent: 'flex-end' }}>
-
-            <Box >  
-                <Box p={2}>  
-                <img className="secondaryItem" src="https://cdn.shopify.com/s/files/1/0048/9508/0519/products/novacesta_540x.png?v=1606162938" alt="" />           
-                </Box>
-                <Box p={2}>  
-                <img className="secondaryItem" src="https://http2.mlstatic.com/D_NQ_NP960486-MLA45652187904_042021-F.jpg" alt="" />           
-                </Box>
-           
-            </Box>
-
-            <Box >  
-                <Box p={2}>  
-                <img className="secondaryItem" src="https://http2.mlstatic.com/D_NQ_NP960486-MLA45652187904_042021-F.jpg" alt="" />           
-                </Box>
-                <Box  p={2}>  
-                <img className="secondaryItem" src="https://http2.mlstatic.com/D_NQ_NP960486-MLA45652187904_042021-F.jpg" alt="" />           
-                </Box>
-           
-            </Box>
-
-
-        </Box>
- 
-     </Box>
-         
-    </Grid>
-    </Grid>
-  
-    <Box marginTop={0}>
-    <Typography  variant="h3" align="center" gutterBottom >Novidades</Typography>
-</Box>
- <Grid container direction="row" justifyContent='center' alignItems='center'  >
-        <Grid item xs={8}  >
-            <Box display="flex" className="flexcard" sx={{mt:5}}>
-            <Box className="card">
-            <img src="https://cdn.shopify.com/s/files/1/0048/9508/0519/products/triofacial_540x.jpg?v=1619023593" alt="" />
-            <p className="description">lorem lorem lorem lorem</p>
-            <label className="price">R$: 50</label>
-            </Box>
-
-            <Box className="card">
-            <img src="https://cdn.shopify.com/s/files/1/0048/9508/0519/products/triofacial_540x.jpg?v=1619023593" alt="" />
-            <p className="description">lorem lorem lorem lorem</p>
-            <label className="price">R$: 50</label>
-            </Box>
-
-            <Box className="card">
-            <img src="https://cdn.shopify.com/s/files/1/0048/9508/0519/products/triofacial_540x.jpg?v=1619023593" alt="" />
-            <p className="description">lorem lorem lorem lorem</p>
-            <label className="price">R$: 50</label>
-            </Box>
-
-            <Box className="card">
-            <img src="https://cdn.shopify.com/s/files/1/0048/9508/0519/products/triofacial_540x.jpg?v=1619023593" alt="" />
-            <p className="description">lorem lorem lorem lorem</p>
-            <label className="price">R$: 50</label>
-            </Box>
-
-            <Box className="card">
-            <img src="https://cdn.shopify.com/s/files/1/0048/9508/0519/products/triofacial_540x.jpg?v=1619023593" alt="" />
-            <p className="description">lorem lorem lorem lorem</p>
-            <label className="price">R$: 50</label>
-            </Box>
-
-            <Box className="card">
-            <img src="https://cdn.shopify.com/s/files/1/0048/9508/0519/products/triofacial_540x.jpg?v=1619023593" alt="" />
-            <p className="description">lorem lorem lorem lorem</p>
-            <label className="price">R$: 50</label>
-            </Box>
-
+            <Grid item xs={12} justifyContent='center' alignItems='center' >
             
-            <Box className="card">
-            <img src="https://cdn.shopify.com/s/files/1/0048/9508/0519/products/triofacial_540x.jpg?v=1619023593" alt="" />
-            <p className="description">lorem lorem lorem lorem</p>
-            <label className="price">R$: 50</label>
-            </Box>
+                    <Box className="" >
 
-            <Box className="card">
-            <img src="https://cdn.shopify.com/s/files/1/0048/9508/0519/products/triofacial_540x.jpg?v=1619023593" alt="" />
-            <p className="description">lorem lorem lorem lorem</p>
-            <label className="price">R$: 50</label>
-            </Box>
+                    <Box sx={{ mt: 0, mb: 2 }}>
+                    <Typography variant="h4" align="center" gutterBottom >Feitos pra você</Typography>
+                    </Box>
 
-            <Box className="card">
-            <img src="https://cdn.shopify.com/s/files/1/0048/9508/0519/products/triofacial_540x.jpg?v=1619023593" alt="" />
-            <p className="description">lorem lorem lorem lorem</p>
-            <label className="price">R$: 50</label>
-            </Box>
+                <Box display="flex" >
+                        <ProdutoDestaque
+                            url="https://imgur.com/E6L6JnQ.png"
+                            title="Cabelo"
+                            height={tamanhoProduto.altura}
+                            width={tamanhoProduto.largura}
+                        />
 
-            <Box className="card">
-            <img src="https://cdn.shopify.com/s/files/1/0048/9508/0519/products/triofacial_540x.jpg?v=1619023593" alt="" />
-            <p className="description">lorem lorem lorem lorem</p>
-            <label className="price">R$: 50</label>
-            </Box>
+                        <ProdutoDestaque
+                            url="https://imgur.com/P9aSWXS.png"
+                            title="Rosto"
+                            height={tamanhoProduto.altura}
+                            width={tamanhoProduto.largura}
+                        />
+
+                        <ProdutoDestaque
+                            url="https://imgur.com/QYzm4b4.png"
+                            title="Vestuário"
+                            height={tamanhoProduto.altura}
+                            width={tamanhoProduto.largura}
+                        />
 
 
-     
+                        <ProdutoDestaque
+                            url="https://imgur.com/09qhrt7.png"
+                            title="Higiene"
+                            height={tamanhoProduto.altura}
+                            width={tamanhoProduto.largura}
+                        />
 
-            </Box>
+</Box>
+                    </Box>
+
+                </Grid>
+                
+                <Grid item xs={12} justifyContent='center' alignItems='center' >
+                    <Grid item xs={9} justifyContent='center' alignItems='center'  >
+                        
+                        <Box sx={{ mt: 5 }}>
+                            <Typography variant="h5" align="center" gutterBottom >PRODUTOS EM PROMOÇÃO</Typography>
+                        </Box>
+
+                        <Box display="flex" className="flexcard" sx={{ mt: 5 }}>
+
+                            <Box className="card_promo" display="flex" flexDirection="column">
+                                <img src="https://cdn.shopify.com/s/files/1/0048/9508/0519/products/triofacial_540x.jpg?v=1619023593" alt="" />
+                                <p className="description_promocao">lorem lorem lorem lorem</p>
+                                <div>
+                               
+                                <label className="price_old_promo">R$: 158,00 </label>
+                                <label className="price_promo">R$: 49,99  PROMOÇÃO!</label>
+                                <br/>
+                               <Box sx={{pt:2}} >
+                                    <Button className="btn" variant="outlined" startIcon={<ShoppingBasketIcon />}> Comprar </Button>                        
+                                    <Button className="btn" variant="outlined" startIcon={<ShoppingCartIcon />}> Carrinho </Button>
+                                </Box>
+                                </div>                  
+                            </Box>
+
+                            <Box className="card_promo" display="flex" flexDirection="column">
+                                <img src="https://cdn.shopify.com/s/files/1/0048/9508/0519/products/castanhaeacafrao_540x.png?v=1634224377" alt="" />
+                                <p className="description_promocao">lorem lorem lorem lorem</p>
+                                <div>
+                               
+                                <label className="price_old_promo">R$: 158,00 </label>
+                                <label className="price_promo">R$: 49,99  PROMOÇÃO!</label>
+                                <br/>
+                               <Box sx={{pt:2}} >
+                                    <Button className="btn" variant="outlined" startIcon={<ShoppingBasketIcon />}> Comprar </Button>                        
+                                    <Button className="btn" variant="outlined" startIcon={<ShoppingCartIcon />}> Carrinho </Button>
+                                </Box>
+                                </div>                  
+                            </Box>
+
+                            <Box className="card_promo" display="flex" flexDirection="column">
+                                <img src="https://cdn.shopify.com/s/files/1/0048/9508/0519/products/5_2b1247be-c4fb-45c5-aa67-ba60db5ff6ca_540x.png?v=1633532199" alt="" />
+                                <p className="description_promocao">lorem lorem lorem lorem</p>
+                                <div>
+                               
+                                <label className="price_old_promo">R$: 158,00 </label>
+                                <label className="price_promo">R$: 49,99  PROMOÇÃO!</label>
+                                <br/>
+                               <Box sx={{pt:2}} >
+                                    <Button className="btn" variant="outlined" startIcon={<ShoppingBasketIcon />}> Comprar </Button>                        
+                                    <Button className="btn" variant="outlined" startIcon={<ShoppingCartIcon />}> Carrinho </Button>
+                                </Box>
+                                </div>                  
+                            </Box>
+
+                            <Box className="card_promo" display="flex" flexDirection="column">
+                                <img src="https://cdn.shopify.com/s/files/1/0048/9508/0519/products/trioabacate_2_540x.png?v=1625228181" alt="" />
+                                <p className="description_promocao">lorem lorem lorem lorem</p>
+                                <div>
+                               
+                                <label className="price_old_promo">R$: 158,00 </label>
+                                <label className="price_promo">R$: 49,99  PROMOÇÃO!</label>
+                                <br/>
+                               <Box sx={{pt:2}} >
+                                    <Button className="btn" variant="outlined" startIcon={<ShoppingBasketIcon />}> Comprar </Button>                        
+                                    <Button className="btn" variant="outlined" startIcon={<ShoppingCartIcon />}> Carrinho </Button>
+                                </Box>
+                                </div>                  
+                            </Box>
+
+                            <Box className="card_promo" display="flex" flexDirection="column">
+                                <img src="https://cdn.shopify.com/s/files/1/0048/9508/0519/products/trioabacate_540x.png?v=1625071363" alt="" />
+                                <p className="description_promocao">lorem lorem lorem lorem</p>
+                                <div>
+                               
+                                <label className="price_old_promo">R$: 158,00 </label>
+                                <label className="price_promo">R$: 49,99  PROMOÇÃO!</label>
+                                <br/>
+                               <Box sx={{pt:2}} >
+                                    <Button className="btn" variant="outlined" startIcon={<ShoppingBasketIcon />}> Comprar </Button>                        
+                                    <Button className="btn" variant="outlined" startIcon={<ShoppingCartIcon />}> Carrinho </Button>
+                                </Box>
+                                </div>                  
+                            </Box>
+
+                            <Box className="card_promo" display="flex" flexDirection="column">
+                                <img src="https://cdn.shopify.com/s/files/1/0048/9508/0519/products/CapturadeTela2020-09-02as12.03.27_540x_086f7a8f-fb33-4523-88c6-96ccce28b8af_540x.png?v=1630456228" alt="" />
+                                <p className="description_promocao">lorem lorem lorem lorem</p>
+                                <div>
+                               
+                                <label className="price_old_promo">R$: 158,00 </label>
+                                <label className="price_promo">R$: 49,99  PROMOÇÃO!</label>
+                                <br/>
+                               <Box sx={{pt:2}} >
+                                    <Button className="btn" variant="outlined" startIcon={<ShoppingBasketIcon />}> Comprar </Button>                        
+                                    <Button className="btn" variant="outlined" startIcon={<ShoppingCartIcon />}> Carrinho </Button>
+                                </Box>
+                                </div>                  
+                            </Box>
+
+                            <Box className="card_promo" display="flex" flexDirection="column">
+                                <img src="https://cdn.shopify.com/s/files/1/0048/9508/0519/products/sabaodecocoherbaiye_540x.jpg?v=1584549723" alt="" />
+                                <p className="description_promocao">lorem lorem lorem lorem</p>
+                                <div>
+                               
+                                <label className="price_old_promo">R$: 25,00 </label>
+                                <label className="price_promo">R$: 49,99  PROMOÇÃO!</label>
+                                <br/>
+                               <Box sx={{pt:2}} >
+                                    <Button className="btn" variant="outlined" startIcon={<ShoppingBasketIcon />}> Comprar </Button>                        
+                                    <Button className="btn" variant="outlined" startIcon={<ShoppingCartIcon />}> Carrinho </Button>
+                                </Box>
+                                </div>                  
+                            </Box>
+
+                            <Box className="card_promo" display="flex" flexDirection="column">
+                                <img src="https://cdn.shopify.com/s/files/1/0048/9508/0519/products/CapturadeTela2020-09-02as12.00.11_540x.png?v=1629722581" alt="" />
+                                <p className="description_promocao">lorem lorem lorem lorem</p>
+                                <div>
+                               
+                                <label className="price_old_promo">R$: 158,00 </label>
+                                <label className="price_promo">R$: 49,99  PROMOÇÃO!</label>
+                                <br/>
+                               <Box sx={{pt:2}} >
+                                    <Button className="btn" variant="outlined" startIcon={<ShoppingBasketIcon />}> Comprar </Button>                        
+                                    <Button className="btn" variant="outlined" startIcon={<ShoppingCartIcon />}> Carrinho </Button>
+                                </Box>
+                                </div>                  
+                            </Box>
+
+        
+                          
+
+                      
+
+                        </Box>
+
+                    </Grid>
+                
+
+
+
+       
+
+
+              
+            </Grid>
+
+
+
         </Grid>
-  </Grid>
-    </Box>
+        
 
-
-  
-    <Box style={{  height: "60px" }} className="aux ">
-        <Box paddingTop={1}>
-            <Typography variant="subtitle2" align="center" gutterBottom >© 2020 Copyright:</Typography>
-        </Box>
-
-        <Box>
-            <a target="_blank" href="#">
-                <Typography variant="subtitle2" gutterBottom align="center" style={{color: "white" }} > BOYRÁ</Typography>
-            </a>
-        </Box>
-    </Box>
-
-</>
-)
+        </>
+    )
 }
 
 export default Home;
